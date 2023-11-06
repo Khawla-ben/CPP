@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 19:46:16 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/11/06 12:05:24 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/11/06 13:15:24 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,33 @@ int search_for_oldest(Phonebook	Phonebook)//not correct
 	return (count);
 }
 
+std::string check_the_index(Phonebook Phonebook)
+{
+	int j = -1;
+	std::string value_of_index;
+	std::string line;
+
+	std::cout << "Enter the index of the contact :" << std::endl ;
+	std::getline(std::cin, line);
+	while (++j <= 7)
+	{
+		value_of_index = Phonebook.Array[j].getIndex();
+		if (value_of_index == line)
+			break ;
+	}
+	if (j == 8)
+	{
+		std::cout << "Enter the index of the contact :" << std::endl ;
+		check_the_index(Phonebook);
+	}
+	return (value_of_index);
+}
+
+void display_contact(std::string value, Phonebook Phonebook)
+{
+	
+}
+
 int main()
 {
 	int			j;
@@ -77,6 +104,11 @@ int main()
 	Phonebook	Phonebook;
 
 	i = 0;
+
+	// j = -1;
+	// while (++j < 7)
+	// 	Phonebook.Array[j].setIndex(-1);
+	
 	Phonebook.Array[0].setIndex(0);
 	while (1)
 	{
@@ -114,33 +146,52 @@ int main()
 			Phonebook.Array[j].setPhonenumber(check_if_empty("Enter the phone number: "));
 			Phonebook.Array[j].setDarkestsecret(check_if_empty("Enter a darckest secret: "));
 			Phonebook.Array[j].setIndex(j);
-			Phonebook.Array[j].setNum(i++);////////
+			Phonebook.Array[j].setNum(i++);
 
 
 			// afficher list
-			int a;
-			int value;
-			int value2;
-			std::string value1;
+			// int a;
+			// int value;
+			// int value2;
+			// std::string value1;
 
-			a = -1;
-			value = -1;
-			while (++a <= 7)
-			{
-				value = Phonebook.Array[a].getIndex();
-				value1 = Phonebook.Array[a].getFirstName();
-				value2 = Phonebook.Array[a].getNum();
-				std::cout << value << std::endl ;
-				std::cout << value1 << std::endl;
-				std::cout << value2 << std::endl;
-				std::cout << "********" << std::endl;
-			}
+			// a = -1;
+			// value = -1;
+			// while (++a <= 7)
+			// {
+			// 	value = Phonebook.Array[a].getIndex();
+			// 	value1 = Phonebook.Array[a].getFirstName();
+			// 	value2 = Phonebook.Array[a].getNum();
+			// 	std::cout << value << std::endl ;
+			// 	std::cout << value1 << std::endl;
+			// 	std::cout << value2 << std::endl;
+			// 	std::cout << "********" << std::endl;
+			// }
 			
 		}
-		// else if (word == "SEARCH")
-		// {
+		else if (word == "SEARCH")
+		{
+			std::cout << " Index " << " | " <<  " First name " << " | " << " Last name " << " | " << " Nickname " << std::endl ;
+			j = -1;
+			while (++j <= 7)
+			{
+				check = Phonebook.Array[j].getFirstName();
+				if (check == "")
+					break ;
+				std::cout << Phonebook.Array[j].getIndex() << " | " <<  Phonebook.Array[j].getFirstName() << " | " << Phonebook.Array[j].getLastName() << " | " << Phonebook.Array[j].getNickname() << std::endl ;
+			}
+			// std::cout << "Enter the index of the contact :" << std::endl ;
+			// std::getline(std::cin, word);
+			//check if the index is exist
+			//if yes return the informations of the contact
+			//if not return set the correct index
+			std::string	value;
+			value = check_the_index(Phonebook);
+			//search of the index and write his informations
+			//display contact
+			display_contact(value, Phonebook);
 			
-		// }
+		}
 		else if (word == "EXIT")
 			exit(1);
 	}
