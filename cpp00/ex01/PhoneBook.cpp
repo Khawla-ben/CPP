@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 19:46:16 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/11/05 20:41:51 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/11/06 12:05:24 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int search_for_oldest(Phonebook	Phonebook)//not correct
 
 	count = Phonebook.Array[0].getNum();
 	j = 0;
-	while (++j <= 7)
+	while (++j < 7)
 	{
 		num = Phonebook.Array[j].getNum();
 		if (num < count)
@@ -86,7 +86,7 @@ int main()
 		if (word == "ADD")
 		{
 			j = -1;
-			while (++j <= 2)
+			while (++j <= 7)
 			{
 				check = Phonebook.Array[j].getFirstName();
 				if (check == "")
@@ -95,7 +95,7 @@ int main()
 			//check_if_the array is full
 			//if not return the index
 			//if yes , replace the first one in the list by the new one
-			if (j == 2)
+			if (j == 8)
 			{
 				std::cout << "WHAAAAT" << std::endl ;
 				//search for the oldest one (num)
@@ -120,17 +120,20 @@ int main()
 			// afficher list
 			int a;
 			int value;
+			int value2;
 			std::string value1;
 
 			a = -1;
 			value = -1;
-			// value1 = NULL;
 			while (++a <= 7)
 			{
 				value = Phonebook.Array[a].getIndex();
 				value1 = Phonebook.Array[a].getFirstName();
+				value2 = Phonebook.Array[a].getNum();
 				std::cout << value << std::endl ;
 				std::cout << value1 << std::endl;
+				std::cout << value2 << std::endl;
+				std::cout << "********" << std::endl;
 			}
 			
 		}
