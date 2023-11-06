@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 19:46:16 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/11/06 13:15:24 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/11/06 15:01:13 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,10 +82,7 @@ std::string check_the_index(Phonebook Phonebook)
 			break ;
 	}
 	if (j == 8)
-	{
-		std::cout << "Enter the index of the contact :" << std::endl ;
 		check_the_index(Phonebook);
-	}
 	return (value_of_index);
 }
 
@@ -133,8 +130,6 @@ int main()
 				//search for the oldest one (num)
 				// set j by the index of it
 				int var = search_for_oldest(Phonebook);
-				std::cout << var << std::endl ;
-				std::cout << "ook" << std::endl ;
 				std::cout << Phonebook.Array[var].getIndex() << std::endl ;
 				j = Phonebook.Array[var].getIndex();
 				
@@ -171,17 +166,16 @@ int main()
 		}
 		else if (word == "SEARCH")
 		{
-			std::cout << " Index " << " | " <<  " First name " << " | " << " Last name " << " | " << " Nickname " << std::endl ;
+			std::cout << std::setw(10) << "Index" << " | " << std::setw(10) << "First name" << " | " <<  std::setw(10) << "Last name" << " | " << std::setw(10) << "Nickname" << std::endl ;
 			j = -1;
 			while (++j <= 7)
 			{
 				check = Phonebook.Array[j].getFirstName();
 				if (check == "")
 					break ;
-				std::cout << Phonebook.Array[j].getIndex() << " | " <<  Phonebook.Array[j].getFirstName() << " | " << Phonebook.Array[j].getLastName() << " | " << Phonebook.Array[j].getNickname() << std::endl ;
+				//i should first check if the values are more that 10 char 
+				std::cout << std::setw(10) << Phonebook.Array[j].getIndex() << " | " <<std::setw(10) <<  Phonebook.Array[j].getFirstName() << " | " <<std::setw(10) << Phonebook.Array[j].getLastName() << " | " <<std::setw(10) << Phonebook.Array[j].getNickname() << std::endl ;
 			}
-			// std::cout << "Enter the index of the contact :" << std::endl ;
-			// std::getline(std::cin, word);
 			//check if the index is exist
 			//if yes return the informations of the contact
 			//if not return set the correct index
@@ -189,7 +183,7 @@ int main()
 			value = check_the_index(Phonebook);
 			//search of the index and write his informations
 			//display contact
-			display_contact(value, Phonebook);
+			// display_contact(value, Phonebook);
 			
 		}
 		else if (word == "EXIT")

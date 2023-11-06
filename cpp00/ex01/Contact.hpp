@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 20:02:32 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/11/05 19:45:04 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/11/06 14:49:27 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 
 #include <iostream>
+#include <iomanip>
 
 class Contact
 {
