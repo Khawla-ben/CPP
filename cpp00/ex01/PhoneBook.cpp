@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 19:46:16 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/11/06 15:01:13 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/11/07 16:09:46 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 int check_if_digit(const std::string& information)
 {
-	int i = 0;
+	size_t i = 0;
 	while (i < information.length())
 	{
 		if (!std::isdigit(information[i]))
@@ -50,7 +50,7 @@ std::string check_if_empty(const std::string& var)
 	
 }
 
-int search_for_oldest(Phonebook	Phonebook)//not correct
+int search_for_oldest(Phonebook	Phonebook)
 {
 	int num;
 	int j;
@@ -67,7 +67,7 @@ int search_for_oldest(Phonebook	Phonebook)//not correct
 	return (count);
 }
 
-std::string check_the_index(Phonebook Phonebook)
+void check_the_index(Phonebook Phonebook)
 {
 	int j = -1;
 	std::string value_of_index;
@@ -77,18 +77,33 @@ std::string check_the_index(Phonebook Phonebook)
 	std::getline(std::cin, line);
 	while (++j <= 7)
 	{
-		value_of_index = Phonebook.Array[j].getIndex();
+		std::ostringstream oss;
+		oss << Phonebook.Array[j].getIndex();
+		value_of_index = oss.str();
 		if (value_of_index == line)
-			break ;
+		{
+			std::cout << "Index : " << Phonebook.Array[j].getIndex() << std::endl ;
+			std::cout << "First Name : " << Phonebook.Array[j].getFirstName() << std::endl ;
+			std::cout <<  "Last Name : " << Phonebook.Array[j].getLastName() << std::endl ;
+			std::cout << "Nick Name : " << Phonebook.Array[j].getNickname() << std::endl ;
+			std::cout << "Phone Number : " << Phonebook.Array[j].getPhonenumber() << std::endl ;
+			std::cout << "Darkest Secret : " << Phonebook.Array[j].getDarkestsecret() << std::endl ;
+			return ;
+		}
 	}
 	if (j == 8)
 		check_the_index(Phonebook);
-	return (value_of_index);
+	return ;
 }
 
-void display_contact(std::string value, Phonebook Phonebook)
+std::string check_if_more_than_10(std::string value)
 {
-	
+	if (value.length() > 10)
+	{
+		value.resize(9);
+		value += '.'; 
+	}
+	return(value);
 }
 
 int main()
@@ -101,11 +116,6 @@ int main()
 	Phonebook	Phonebook;
 
 	i = 0;
-
-	// j = -1;
-	// while (++j < 7)
-	// 	Phonebook.Array[j].setIndex(-1);
-	
 	Phonebook.Array[0].setIndex(0);
 	while (1)
 	{
@@ -134,35 +144,13 @@ int main()
 				j = Phonebook.Array[var].getIndex();
 				
 			}
-			
 			Phonebook.Array[j].setFirstName(check_if_empty("Enter the first name: "));
 			Phonebook.Array[j].setLastName(check_if_empty("Enter the last name: "));
 			Phonebook.Array[j].setNickname(check_if_empty("Enter the nickname: "));
 			Phonebook.Array[j].setPhonenumber(check_if_empty("Enter the phone number: "));
 			Phonebook.Array[j].setDarkestsecret(check_if_empty("Enter a darckest secret: "));
 			Phonebook.Array[j].setIndex(j);
-			Phonebook.Array[j].setNum(i++);
-
-
-			// afficher list
-			// int a;
-			// int value;
-			// int value2;
-			// std::string value1;
-
-			// a = -1;
-			// value = -1;
-			// while (++a <= 7)
-			// {
-			// 	value = Phonebook.Array[a].getIndex();
-			// 	value1 = Phonebook.Array[a].getFirstName();
-			// 	value2 = Phonebook.Array[a].getNum();
-			// 	std::cout << value << std::endl ;
-			// 	std::cout << value1 << std::endl;
-			// 	std::cout << value2 << std::endl;
-			// 	std::cout << "********" << std::endl;
-			// }
-			
+			Phonebook.Array[j].setNum(i++);		
 		}
 		else if (word == "SEARCH")
 		{
@@ -174,17 +162,12 @@ int main()
 				if (check == "")
 					break ;
 				//i should first check if the values are more that 10 char 
-				std::cout << std::setw(10) << Phonebook.Array[j].getIndex() << " | " <<std::setw(10) <<  Phonebook.Array[j].getFirstName() << " | " <<std::setw(10) << Phonebook.Array[j].getLastName() << " | " <<std::setw(10) << Phonebook.Array[j].getNickname() << std::endl ;
+				std::cout << std::setw(10) << Phonebook.Array[j].getIndex() << " | " <<std::setw(11) <<  check_if_more_than_10(Phonebook.Array[j].getFirstName()) << " | " <<std::setw(10) << check_if_more_than_10(Phonebook.Array[j].getLastName()) << " | " <<std::setw(10) << check_if_more_than_10(Phonebook.Array[j].getNickname()) << std::endl ;
 			}
 			//check if the index is exist
-			//if yes return the informations of the contact
+			//if yes search for the index and write his informations to display contact
 			//if not return set the correct index
-			std::string	value;
-			value = check_the_index(Phonebook);
-			//search of the index and write his informations
-			//display contact
-			// display_contact(value, Phonebook);
-			
+			check_the_index(Phonebook);
 		}
 		else if (word == "EXIT")
 			exit(1);
