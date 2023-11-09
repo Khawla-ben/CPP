@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 17:18:52 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/11/09 19:11:57 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/11/09 19:59:08 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,19 +30,25 @@ std::string check_if_empty(const std::string& var)
 
 	std::cout << var;
 	std::getline(std::cin, information);
+	if (!std::cin)
+		exit(1);
 	if (var == "Enter the phone number: ")
 	{
-		while (check_if_digit(information) == 0 || information == "" )
+		while (check_if_digit(information) == 0 || information == "")
 		{
 			std::cout << var;
 			std::getline(std::cin, information);
+			if (!std::cin)
+				exit(1);
 		}
 		return (information);
 	}
-	while (information == "")
+	while (information == "" && !std::cin.eof())
 	{
 		std::cout << var;
 		std::getline(std::cin, information);
+		if (!std::cin)
+			exit(1);
 	}
 	return (information);
 	

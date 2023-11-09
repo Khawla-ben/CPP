@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 19:46:16 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/11/09 15:42:03 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/11/09 20:23:08 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ void Phonebook::check_the_index()
 
 	std::cout << "Enter the index of the contact :" << std::endl ;
 	std::getline(std::cin, line);
+	if (!std::cin)
+		exit(1);
 	while (++j <= 7)
 	{
 		std::ostringstream oss;
@@ -57,6 +59,11 @@ void Phonebook::search()
 			break ;
 		std::cout << std::setw(10) << Array[j].getIndex() << " | " << std::setw(10) <<  check_if_more_than_10(Array[j].getFirstName()) << " | " <<std::setw(10) << check_if_more_than_10(Array[j].getLastName()) << " | " <<std::setw(10) << check_if_more_than_10(Array[j].getNickname()) << std::endl;
 	}
+	if (j == 0)
+	{
+		std::cout << "        The Phonebook is empty " << std::endl;
+		return ;
+	}
 	check_the_index();
 }
 void Phonebook::set_value()
@@ -86,13 +93,13 @@ void Phonebook::add(int i)
 	std::string	check;
 	int j = -1;
 
-	while (++j <= 7)
+	while (++j < 7)
 	{
 		check = Array[j].getFirstName();
 		if (check == "")
 			break;
 	}
-	if (j == 8)
+	if (j == 7)
 	{
 		int var = search_for_oldest();
 		std::cout << Array[var].getIndex() << std::endl ;
