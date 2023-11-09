@@ -6,12 +6,17 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 19:46:16 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/11/09 20:23:08 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/11/09 21:06:44 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 #include "Contact.hpp"
+
+
+
+// Phonebook::Phonebook() :
+// 	 {}
 
 
 void Phonebook::check_the_index()
@@ -114,3 +119,5 @@ void Phonebook::add(int i)
 	Array[j].setIndex(j);
 	Array[j].setNum(i++);
 }
+
+// Phonebook::~Phonebook() {}

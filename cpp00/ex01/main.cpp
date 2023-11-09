@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 17:18:52 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/11/09 19:59:08 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/11/09 20:49:27 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,11 +64,16 @@ std::string check_if_more_than_10(std::string value)
 	return(value);
 }
 
-int main()
+int main(int ac, char **av)
 {
 	int			i;
 	std::string word;
 	Phonebook	Phonebook;
+	(void)av;
+	if (ac > 1) {
+		std::cout << "Error: invalid arguments" << std::endl;
+		return (1);
+	}
 
 	i = 0;
 	while (!std::cin.eof())

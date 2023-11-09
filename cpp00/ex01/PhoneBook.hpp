@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 19:46:14 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/11/09 15:38:02 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/11/09 21:06:39 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,15 @@ class Phonebook
 {
 private :
 	Contact Array[7];
+
 public :
+
+	// Phonebook();
+
 	void add(int i);
 	void search();
 	int search_for_oldest();
 	void set_value();
 	void check_the_index();
+	// ~Phonebook();
 };

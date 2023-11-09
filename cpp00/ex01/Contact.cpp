@@ -12,17 +12,13 @@ Contact::Contact() :
 	phone_number(""),
 	darkest_secret("") {}
 
-// Contact::Contact() {
-// 	first_name = "";
-// }
-
 void Contact::setIndex(int value)
 {
 	// this->index = value;
 	index = value;
 }
 
-const int& Contact::getIndex() const
+const int& Contact::getIndex() const 
 {
 	return this->index;
 }
@@ -86,3 +82,5 @@ const std::string& Contact::getDarkestsecret() const
 {
 	return this->darkest_secret;
 }
+
+Contact::~Contact() {}
