@@ -2,7 +2,6 @@
 
 #include "Contact.hpp"
 
-
 Contact::Contact() :
 	index(-1),
 	num(-1),
