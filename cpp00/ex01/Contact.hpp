@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 20:02:32 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/11/07 18:32:40 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/11/09 15:39:18 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,6 @@ public :
 	const std::string& getPhonenumber() const;
 	const std::string& getDarkestsecret() const;
 	
-	~Contact(); //Destructor
+	// ~Contact(); //Destructor
 		
 };

@@ -6,32 +6,38 @@
 #    By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/07 17:18:46 by kben-ham          #+#    #+#              #
-#    Updated: 2023/11/07 17:58:44 by kben-ham         ###   ########.fr        #
+#    Updated: 2023/11/09 15:32:14 by kben-ham         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = a.out
+NAME = Phonebook
 
-SRCS = main.cpp Contact.cpp PhoneBook.cpp
-CPP = c++
+CC = c++
+
+CFLAGS =  -Wall -Wextra -Werror -std=c++98
+
+RM = rm -rf
+
+MY_FILES =  main.cpp Contact.cpp PhoneBook.cpp
+
+OBJECT = $(MY_FILES:.cpp=.o)
 
 HEADERS = Contact.hpp PhoneBook.hpp
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
-OBJS = $(SRCS:.cpp=.o)
+all: $(NAME)
 
-all : $(NAME)
+%.o: %.cpp $(HEADERS)
+	$(CC)  $(CFLAGS) -o $@ -c  $<
 
-$(NAME) : $(OBJS)
-    # $(CPP) $(CPPFLAGS) $^ -o $@
+$(NAME): $(OBJECT)
+	$(CC)  $(CFLAGS) $^ -o $(NAME)
 
-%.o : %.cpp $(HEADERS)
-    # $(CPP) $(CPPFLAGS) -c $< -o $@
+clean:
+	@$(RM) $(OBJECT)
 
-clean :
-    rm -rf $(OBJS)
+fclean: clean
+	@$(RM) $(NAME)
 
-fclean : clean
-    rm -rf $(NAME)
+re: fclean all
 
-re : fclean all
+.PHONY : all clean fclean re
