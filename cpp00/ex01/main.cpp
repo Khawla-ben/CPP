@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 17:18:52 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/11/09 15:41:11 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/11/09 19:11:57 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,11 +65,10 @@ int main()
 	Phonebook	Phonebook;
 
 	i = 0;
-	while (1)
+	while (!std::cin.eof())
 	{
 		std::cout << "My_Phone_Book : ";
 		std::getline(std::cin, word);
-		
 		if (word == "ADD")
 		{
 			Phonebook.add(i);
