@@ -10,13 +10,13 @@ class  HumanB
 {
 private:
 	std::string name;
-	Weapon my_weapon1;
+	Weapon *my_weapon1;
 public:
-	HumanB();
+	HumanB(const std::string& str);
 
 	void setName(const std::string value);
 	void attack(void);
-	void setWeapon(Weapon a);
+	void setWeapon(Weapon &a);
 	const std::string& getName()const;
 
 	~HumanB();

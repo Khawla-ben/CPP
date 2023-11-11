@@ -4,8 +4,8 @@
 
 #include "HumanA.hpp"
 
-HumanA::HumanA(Weapon *a):
-	name(""),
+HumanA::HumanA(const std::string& str, Weapon &a):
+	name(str),
 	my_weapon2(a) {}
 
 void HumanA::setName(const std::string value)
@@ -20,7 +20,7 @@ const std::string& HumanA::getName() const
 
 void HumanA::attack()
 {
-	std::cout << getName() << "attacks with their" << my_weapon2.getType();
+	std::cout << getName() << " attacks with their " << my_weapon2.getType() << std::endl;
 }
 
 HumanA::~HumanA()

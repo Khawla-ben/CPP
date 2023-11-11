@@ -9,9 +9,9 @@ Weapon::Weapon():
 Weapon::Weapon(const std::string& str):
 	type(str) {}
 
-void Weapon::setType(const std::string new_type)
+void Weapon::setType(const std::string& new_type)
 {
-	type = new_type;
+	this->type = new_type;
 }
 
 const std::string& Weapon::getType() const
