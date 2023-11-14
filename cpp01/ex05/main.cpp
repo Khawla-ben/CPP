@@ -24,7 +24,15 @@ int main(int ac, char **av)
 
 	std::cout << "Enter a choice (DEBUG, INFO, WARNING, ERROR): ";
 	std::cin >> level;
+
+	if (std::cin.fail())
+	{
+		std::cerr << "Invalid input.\n";
+		delete obj;
+		return 1;
+	}
 	obj->complain(level);
+	delete obj;
 
 	return 0;
 }
