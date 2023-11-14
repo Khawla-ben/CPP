@@ -4,6 +4,14 @@
 #include <iostream>
 
 
+enum Choice {
+	DEBUG,
+	INFO,
+	WARNING,
+	ERROR
+};
+
+
 class  Harl
 {
 private:
@@ -13,11 +21,15 @@ private:
 	void warning(void);
 	void error(void);
 
+	void (Harl::*debugF)(void);
+	void (Harl::*infoF)(void);
+	void (Harl::*warningF)(void);
+	void (Harl::*errorF)(void);
+
 public:
 	Harl();
 
 	void complain(std::string level);
-
 
 	~Harl();
 };

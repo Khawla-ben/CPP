@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 20:02:32 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/11/09 20:47:37 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/11/14 15:58:03 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ private :
 
 public :
 
-	Contact(); //Constructor
+	Contact();
 	
 	void setIndex(int value);
 	void setNum(int value);
@@ -49,6 +49,5 @@ public :
 	const std::string& getPhonenumber() const;
 	const std::string& getDarkestsecret() const;
 	
-	~Contact(); //Destructor
-		
+	~Contact();
 };

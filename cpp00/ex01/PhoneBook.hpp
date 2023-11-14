@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 19:46:14 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/11/09 21:06:39 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/11/14 16:07:17 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,17 @@ std::string check_if_more_than_10(std::string value);
 class Phonebook
 {
 private :
-	Contact Array[7];
+	Contact Array[8];
 
 public :
 
-	// Phonebook();
+	Phonebook();
 
 	void add(int i);
 	void search();
 	int search_for_oldest();
 	void set_value();
 	void check_the_index();
-	// ~Phonebook();
+	
+	~Phonebook();
 };

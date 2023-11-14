@@ -16,7 +16,6 @@ public:
 
 	const std::string& getName()const;
 
-
 	~Zombie();
 };
 

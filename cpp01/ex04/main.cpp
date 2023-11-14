@@ -39,14 +39,17 @@ int main(int ac, char **av)
 		position = new_ss.find(s1);
 	}
 
-	std::ofstream newfile("newfile.replace");
+	std::string new_name = av[1];
+	new_name += ".replace";
+
+	std::ofstream newfile(new_name);
 
 	if (!newfile.is_open())
 	{
     	std::cerr << "Error creating the file." << std::endl;
         return 1;
     }
-	newfile << new_ss << std::endl;
+	newfile << new_ss;
     newfile.close();
 	return 0;
 }

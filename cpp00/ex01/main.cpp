@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 17:18:52 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/11/09 20:49:27 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/11/14 15:58:11 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ int main(int ac, char **av)
 	int			i;
 	std::string word;
 	Phonebook	Phonebook;
+	
 	(void)av;
 	if (ac > 1) {
 		std::cout << "Error: invalid arguments" << std::endl;

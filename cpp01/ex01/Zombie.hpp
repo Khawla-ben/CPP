@@ -4,6 +4,8 @@
 
 #include <iostream>
 
+#define MAX_INT 500
+
 class  Zombie
 {
 private:

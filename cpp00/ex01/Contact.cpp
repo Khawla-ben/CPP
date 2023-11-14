@@ -13,7 +13,6 @@ Contact::Contact() :
 
 void Contact::setIndex(int value)
 {
-	// this->index = value;
 	index = value;
 }
 
