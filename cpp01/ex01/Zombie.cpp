@@ -16,10 +16,10 @@ const std::string& Zombie::getName() const
 
 void Zombie::announce(void)
 {
-	std::cout << getName() << ": BraiiiiiiinnnzzzZ..." << std::endl;
+	std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
 Zombie::~Zombie()
 {
-	std::cout << "Destructor: " << getName() << std::endl;
+	std::cout << "Destructor: " << name << std::endl;
 }
