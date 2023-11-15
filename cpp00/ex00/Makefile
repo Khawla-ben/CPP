@@ -2,25 +2,30 @@
 
 NAME = a.out
 
+CC = c++
+
+CFLAGS =  -Wall -Wextra -Werror -std=c++98
+
+RM = rm -rf
+
+MY_FILES =  megaphone.cpp
+
 OBJECT = $(MY_FILES:.cpp=.o)
 
-CC = c++ -Wall -Wextra -Werror -std=c++98
-
-MY_FILES = megaphone.cpp
 
 all: $(NAME)
 
 %.o: %.cpp
-	$(CC) -o $@ -c  $< 
+	$(CC)  $(CFLAGS) -o $@ -c  $<
 
-$(NAME): $(OBJECT) 
-	$(CC) $^ -o $(NAME)
+$(NAME): $(OBJECT)
+	$(CC)  $(CFLAGS) $^ -o $(NAME)
 
 clean:
-	rm -f $(OBJECT)
+	@$(RM) $(OBJECT)
 
 fclean: clean
-	rm -rf $(NAME)
+	@$(RM) $(NAME)
 
 re: fclean all
 
