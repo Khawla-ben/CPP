@@ -16,13 +16,11 @@ public:
 
 	Fixed();
 	Fixed(const Fixed &val);
-	Fixed & operator = (const Fixed &a);//Copy assignment operator called
+	Fixed &operator=(const Fixed &a);//Copy assignment operator called
 
-	int getRawBits(void) const;//that returns the raw value of the fixed-point value.
 	void setRawBits(int const raw );//that sets the raw value of the fixed-point number.
-
-	const std::string& getName()const;
-
+	int getRawBits(void) const;//that returns the raw value of the fixed-point value.
 
 	~Fixed();
 };
+
