@@ -21,11 +21,7 @@ public:
 	Fixed &operator=(const Fixed &a);//Copy assignment operator called
 
 
-	// Fixed &operator=(const Fixed &a);//Copy assignment operator called
-	// • An overload of the insertion («) operator that inserts a floating-point representation
-	// of the fixed-point number into the output stream object passed as parameter.
-
-	void setRawBits(int const raw );//that sets the raw value of the fixed-point number.
+	void setRawBits(int const raw ); //that sets the raw value of the fixed-point number.
 	int getRawBits(void) const;//that returns the raw value of the fixed-point value.
 
 
@@ -34,4 +30,7 @@ public:
 
 	~Fixed();
 };
+
+std::ostream &operator<<(std::ostream &os, const Fixed &a);// inserts a floating-point representation
+	// of the fixed-point number into the output stream object passed as parameter.
 
