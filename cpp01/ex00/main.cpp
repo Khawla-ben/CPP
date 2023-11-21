@@ -19,5 +19,5 @@ int main(int ac, char **av)
 
 	randomChump("foo1");
 	h_2 = newZombie("khawla");
-	delete (h_2);
+	delete h_2;//key word
 }

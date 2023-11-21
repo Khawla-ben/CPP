@@ -1,6 +1,6 @@
 
 
-NAME = a.out
+NAME = fixed
 
 OBJECT = $(MY_FILES:.cpp=.o)
 
