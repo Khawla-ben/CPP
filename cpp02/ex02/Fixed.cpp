@@ -40,6 +40,7 @@ Fixed &Fixed::operator+(const Fixed &a)
 	this->f_p_Number = this->f_p_Number + a.f_p_Number;
 	return(*this);
 }
+
 Fixed &Fixed::operator-(const Fixed &a)
 {
 	this->f_p_Number = this->f_p_Number - a.f_p_Number;
@@ -63,6 +64,7 @@ Fixed &Fixed::operator--()
 	this->f_p_Number--;
 	return(*this);
 }
+
 Fixed Fixed::operator--(int)
 {
 	Fixed b = *this;
@@ -103,7 +105,14 @@ int Fixed::toInt(void) const
 	return f_p_Number >> number_frac;
 }
 
-Fixed::~Fixed()
-{
-	// std::cout << "Destructor called " << std::endl;
-}
+Fixed::~Fixed() {}
+
+// static Fixed &min(Fixed &a, Fixed &b)
+// {
+// 	if (a < b)
+// }
+
+// const static Fixed &min(const Fixed &a, const Fixed &b)
+// {
+
+// }

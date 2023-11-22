@@ -18,24 +18,41 @@ public:
 	Fixed(const float NUM);
 
 	Fixed(const Fixed &val);
-	Fixed &operator=(const Fixed &a);//Copy assignment operator called
+	Fixed &operator=(const Fixed &a);
 
 
-	void setRawBits(int const raw ); //that sets the raw value of the fixed-point number.
-	int getRawBits(void) const;//that returns the raw value of the fixed-point value.
+	void setRawBits(int const raw );
+	int getRawBits(void) const;
 
 
-	float toFloat(void) const; // fixed-point to floating-point.
-	int toInt(void) const; //fixed-point to an integer .
+	float toFloat(void) const;
+	int toInt(void) const;
 
+	Fixed &operator>(const Fixed &a);
+	Fixed &operator<(const Fixed &a);
+	Fixed operator>=(const Fixed &a);
+	Fixed operator<=(const Fixed &a);
+	Fixed operator==(const Fixed &a);
+	Fixed operator!=(const Fixed &a);
+
+	//
 	Fixed &operator+(const Fixed &a);
 	Fixed &operator-(const Fixed &a);
 	Fixed operator*(const Fixed &a);
 	Fixed operator/(const Fixed &a);
+	///
+	///
 	Fixed &operator--();//--a
 	Fixed operator--(int);//a--
 	Fixed &operator++();//++a
 	Fixed operator++(int);//a++
+
+
+	// static Fixed &min(Fixed &a, Fixed &b);
+	// const static Fixed &min(const Fixed &a, const Fixed &b);
+	// //
+	// static Fixed &max(Fixed &a, Fixed &b);
+	// const static Fixed &max(const Fixed &a, const Fixed &b);
 	~Fixed();
 };
 
