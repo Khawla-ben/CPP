@@ -1,5 +1,5 @@
 
-NAME = a.out
+NAME = replace
 
 OBJECT = $(MY_FILES:.cpp=.o)
 
@@ -16,7 +16,7 @@ $(NAME): $(OBJECT)
 	$(CC) $^ -o $(NAME)
 
 clean:
-	rm -f $(OBJECT)
+	rm -f $(OBJECT) *.replace
 
 fclean: clean
 	rm -rf $(NAME)
