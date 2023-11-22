@@ -6,6 +6,9 @@
 Zombie::Zombie():
 	name("") {}
 
+Zombie::Zombie(const std::string& str):
+	name(str) {}
+
 void Zombie::setName(const std::string value)
 {
 	name = value;

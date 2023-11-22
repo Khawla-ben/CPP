@@ -5,8 +5,6 @@
 
 int main(int ac, char **av)
 {
-	int i = 0;
-	Zombie *objArray;
 	(void)av;
 
 	if (ac > 1)
@@ -14,9 +12,11 @@ int main(int ac, char **av)
 		std::cout << "Error: invalid arguments" << std::endl;
 		return (1);
 	}
+	int i = 0;
+	Zombie *objArray;
 
-	objArray = zombieHorde(-2, "khawla");
-	while (i < 2)
+	objArray = zombieHorde(5, "khawla");
+	while (i < 5)
 		objArray[i++].announce();
 	delete [] objArray;
 }

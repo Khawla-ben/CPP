@@ -3,8 +3,7 @@
 
 void randomChump(std::string name)
 {
-	Zombie obj;
+	Zombie obj(name);
 
-	obj.setName(name);
 	obj.announce();
 }
