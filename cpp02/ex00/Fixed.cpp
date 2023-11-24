@@ -16,7 +16,7 @@ Fixed::Fixed(const Fixed &val)
 Fixed &Fixed::operator=(const Fixed &a) {
 	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &a) { //self-assignment 
-		this->f_p_Number = a.f_p_Number;
+		this->f_p_Number = a.getRawBits();
 	}
 	return *this;
 }

@@ -4,7 +4,7 @@
 
 Zombie* zombieHorde(int N, std::string name)
 {
-	if (N <= 0 || N > MAX) {
+	if (N <= 0) {
 		std::cout << "Invalid Argument\n"; exit (1);
 	}
 
