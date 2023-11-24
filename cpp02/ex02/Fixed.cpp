@@ -1,6 +1,8 @@
 
 #include "Fixed.hpp"
 
+
+
 Fixed::Fixed()
 {
 	f_p_Number = 0;
@@ -29,11 +31,65 @@ Fixed &Fixed::operator=(const Fixed &a)
 	return *this;
 }
 
+int Fixed::getRawBits(void) const
+{
+	return(this->f_p_Number);
+}
+
+void Fixed::setRawBits(int const raw)
+{
+	this->f_p_Number = raw;
+}
+
+
+float Fixed::toFloat(void) const
+{
+	return (float)f_p_Number / (float)(1 << number_frac);
+}
+
+int Fixed::toInt(void) const
+{
+	return f_p_Number >> number_frac;
+}
+
+
+bool Fixed::operator>(const Fixed &a) const
+{
+	return this->f_p_Number > a.f_p_Number;
+}
+
+bool Fixed::operator>=(const Fixed &a) const
+{
+	return this->f_p_Number >= a.f_p_Number;
+}
+
+bool Fixed::operator<=(const Fixed &a) const
+{
+	return this->f_p_Number <= a.f_p_Number;
+}
+
+bool Fixed::operator<(const Fixed &a) const
+{
+	return this->f_p_Number < a.f_p_Number;
+}
+
+bool Fixed::operator==(const Fixed &a) const
+{
+	return this->f_p_Number == a.f_p_Number;
+}
+
+bool Fixed::operator!=(const Fixed &a) const
+{
+	return this->f_p_Number != a.f_p_Number;
+}
+
+
 std::ostream &operator<<(std::ostream &os, const Fixed &a)
 {
 	os << a.toFloat();
 	return(os);
 }
+
 
 Fixed &Fixed::operator+(const Fixed &a)
 {
@@ -58,6 +114,8 @@ Fixed Fixed::operator/(const Fixed &a)
 	Fixed b(this->toFloat() / a.toFloat());
 	return (b);
 }
+
+
 
 Fixed &Fixed::operator--()
 {
@@ -85,34 +143,33 @@ Fixed Fixed::operator++(int)//a++
 	return(b);
 }
 
-int Fixed::getRawBits(void) const
+
+Fixed& Fixed::min(Fixed &a, Fixed &b)
 {
-	return(this->f_p_Number);
+	if (a < b)
+		return a;
+	return b;
+}
+const Fixed& Fixed::min(const Fixed &a, const Fixed &b)
+{
+	if (a < b)
+		return a;
+	return b;
 }
 
-void Fixed::setRawBits(int const raw)
+Fixed& Fixed::max(Fixed &a, Fixed &b)
 {
-	this->f_p_Number = raw;
+	if (a > b)
+		return a;
+	return b;
 }
 
-float Fixed::toFloat(void) const
+const Fixed& Fixed::max(const Fixed &a, const Fixed &b)
 {
-	return (float)f_p_Number / (float)(1 << number_frac);
+	if (a > b)
+		return a;
+	return b;
 }
 
-int Fixed::toInt(void) const
-{
-	return f_p_Number >> number_frac;
-}
 
 Fixed::~Fixed() {}
-
-// static Fixed &min(Fixed &a, Fixed &b)
-// {
-// 	if (a < b)
-// }
-
-// const static Fixed &min(const Fixed &a, const Fixed &b)
-// {
-
-// }

@@ -28,31 +28,34 @@ public:
 	float toFloat(void) const;
 	int toInt(void) const;
 
-	Fixed &operator>(const Fixed &a);
-	Fixed &operator<(const Fixed &a);
-	Fixed operator>=(const Fixed &a);
-	Fixed operator<=(const Fixed &a);
-	Fixed operator==(const Fixed &a);
-	Fixed operator!=(const Fixed &a);
+	bool operator>(const Fixed &a) const;
+	bool operator<(const Fixed &a) const;
+	bool operator>=(const Fixed &a) const;
+	bool operator<=(const Fixed &a) const;
+	bool operator==(const Fixed &a) const;
+	bool operator!=(const Fixed &a) const;
 
-	//
+
+	////done
+
 	Fixed &operator+(const Fixed &a);
 	Fixed &operator-(const Fixed &a);
 	Fixed operator*(const Fixed &a);
 	Fixed operator/(const Fixed &a);
-	///
-	///
+
+	////done
+
 	Fixed &operator--();//--a
 	Fixed operator--(int);//a--
 	Fixed &operator++();//++a
 	Fixed operator++(int);//a++
 
 
-	// static Fixed &min(Fixed &a, Fixed &b);
-	// const static Fixed &min(const Fixed &a, const Fixed &b);
+	static Fixed &min(Fixed &a, Fixed &b);
+	const static Fixed& min(const Fixed &a, const Fixed &b);
 	// //
-	// static Fixed &max(Fixed &a, Fixed &b);
-	// const static Fixed &max(const Fixed &a, const Fixed &b);
+	static Fixed &max(Fixed &a, Fixed &b);
+	const static Fixed& max(const Fixed &a, const Fixed &b);
 	~Fixed();
 };
 
