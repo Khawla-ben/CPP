@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/26 18:53:17 by kben-ham          #+#    #+#             */
+/*   Updated: 2023/11/26 18:53:18 by kben-ham         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 
 
 #include <iostream>
@@ -16,7 +28,7 @@ int main(int ac, char **av)
 	std::ifstream filename(av[1]);
 	std::string s1  = av[2];
 	std::string s2 = av[3];
-	if (s1.empty() || s2.empty() || s1 == s2)
+	if (s1.empty() || s2.empty())
 	{
 		std::cout << "string is empty" << std::endl;
 		return (1);
@@ -40,7 +52,7 @@ int main(int ac, char **av)
 	{
 		new_ss.erase(position, s1.length());
 		new_ss.insert(position, s2);
-		position = new_ss.find(s1);
+		position = new_ss.find(s1 , position + s2.size());
 	}
 
 	std::string new_name = av[1];

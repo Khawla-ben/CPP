@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/26 18:44:23 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/11/26 18:44:34 by kben-ham         ###   ########.fr       */
+/*   Created: 2023/11/26 18:44:24 by kben-ham          #+#    #+#             */
+/*   Updated: 2023/11/26 18:44:33 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ ClapTrap::ClapTrap()
 	this->Attack_damage = 0;
 }
 
-
 ClapTrap::ClapTrap(std::string Name)
 {
+
 	std::cout << "Constructor called(paramitrized)" << std::endl;
 	this->Name = Name;
 	this->Hit_points = 10;

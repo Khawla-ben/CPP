@@ -5,25 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/26 18:44:23 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/11/26 18:44:34 by kben-ham         ###   ########.fr       */
+/*   Created: 2023/11/26 18:48:09 by kben-ham          #+#    #+#             */
+/*   Updated: 2023/11/26 18:49:30 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
+
 ClapTrap::ClapTrap()
 {
 	std::cout << "Constructor called" << std::endl;
-	this->Name = "Default";
+	this->Name = "";
 	this->Hit_points = 10;
 	this->Energy_points = 10;
 	this->Attack_damage = 0;
 }
 
-
 ClapTrap::ClapTrap(std::string Name)
 {
+
 	std::cout << "Constructor called(paramitrized)" << std::endl;
 	this->Name = Name;
 	this->Hit_points = 10;

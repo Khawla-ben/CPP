@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/26 18:52:46 by kben-ham          #+#    #+#             */
+/*   Updated: 2023/11/26 18:52:50 by kben-ham         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include"Weapon.hpp"
-#include"HumanA.hpp"
-#include"HumanB.hpp"
+
+#include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
 int main()
 {

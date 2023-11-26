@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/26 18:54:07 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/11/26 18:54:09 by kben-ham         ###   ########.fr       */
+/*   Created: 2023/11/26 18:44:50 by kben-ham          #+#    #+#             */
+/*   Updated: 2023/11/26 18:44:53 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #pragma once
 
-#include <iostream>
+#include "ClapTrap.hpp"
 
 
-class  Fixed
+class  FragTrap : private ClapTrap
 {
-private:
-
-	int f_p_Number;
-	static const int number_frac = 8;
-
 public:
 
-	Fixed();
-	Fixed(const Fixed &val);
-	Fixed &operator=(const Fixed &a);//Copy assignment operator called
+	FragTrap();
+	FragTrap(std::string Name);
 
-	void setRawBits(int const raw );//that sets the raw value of the fixed-point number.
-	int getRawBits(void) const;//that returns the raw value of the fixed-point value.
+	FragTrap(const FragTrap &val);
+	FragTrap &operator=(const FragTrap &a);
 
-	~Fixed();
+
+	void attack(const std::string& target);
+	void highFivesGuys(void);
+
+	~FragTrap();
 };
-

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/26 18:54:07 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/11/26 18:54:09 by kben-ham         ###   ########.fr       */
+/*   Created: 2023/11/26 18:47:57 by kben-ham          #+#    #+#             */
+/*   Updated: 2023/11/26 18:48:07 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,29 @@
 #include <iostream>
 
 
-class  Fixed
+class  ClapTrap
 {
-private:
+protected:
 
-	int f_p_Number;
-	static const int number_frac = 8;
+	std::string Name;
+	int Hit_points;
+	int Energy_points;
+	int Attack_damage;
 
 public:
 
-	Fixed();
-	Fixed(const Fixed &val);
-	Fixed &operator=(const Fixed &a);//Copy assignment operator called
+	ClapTrap();
+	ClapTrap(std::string Name);
 
-	void setRawBits(int const raw );//that sets the raw value of the fixed-point number.
-	int getRawBits(void) const;//that returns the raw value of the fixed-point value.
+	ClapTrap(const ClapTrap &val);
+	ClapTrap &operator=(const ClapTrap &a);
 
-	~Fixed();
+
+	void attack(const std::string& target);
+	void takeDamage(unsigned int amount);
+	void beRepaired(unsigned int amount);
+
+	void guardGate();
+
+	~ClapTrap();
 };
-
