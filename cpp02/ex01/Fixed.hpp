@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 18:54:19 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/11/26 18:54:20 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/11/27 21:59:53 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ public:
 	~Fixed();
 };
 
-std::ostream &operator<<(std::ostream &os, const Fixed &a);// inserts a floating-point representation
+std::ostream &operator<<(std::ostream &os, const Fixed &a);//insertion operator
+//inserts a floating-point representation
 	// of the fixed-point number into the output stream object passed as parameter.
 

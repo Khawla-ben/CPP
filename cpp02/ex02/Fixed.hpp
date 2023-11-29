@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 18:54:34 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/11/26 18:54:35 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/11/29 13:01:50 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,14 +48,11 @@ public:
 	bool operator!=(const Fixed &a) const;
 
 
-	////done
-
 	Fixed &operator+(const Fixed &a);
 	Fixed &operator-(const Fixed &a);
 	Fixed operator*(const Fixed &a);
 	Fixed operator/(const Fixed &a);
 
-	////done
 
 	Fixed &operator--();//--a
 	Fixed operator--(int);//a--
@@ -65,9 +62,10 @@ public:
 
 	static Fixed &min(Fixed &a, Fixed &b);
 	const static Fixed& min(const Fixed &a, const Fixed &b);
-	// //
+
 	static Fixed &max(Fixed &a, Fixed &b);
 	const static Fixed& max(const Fixed &a, const Fixed &b);
+	
 	~Fixed();
 };
 

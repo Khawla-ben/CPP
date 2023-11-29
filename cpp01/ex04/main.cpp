@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 18:53:17 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/11/26 18:53:18 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/11/29 13:17:13 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int main(int ac, char **av)
 	std::ifstream filename(av[1]);
 	std::string s1  = av[2];
 	std::string s2 = av[3];
-	if (s1.empty() || s2.empty())
+	if (s1.empty())
 	{
 		std::cout << "string is empty" << std::endl;
 		return (1);

@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 18:54:04 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/11/26 18:54:05 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/11/27 21:53:41 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ Fixed::Fixed(const Fixed &val)
 
 Fixed &Fixed::operator=(const Fixed &a) {
 	std::cout << "Copy assignment operator called" << std::endl;
-	if (this != &a) { //self-assignment 
+	if (this != &a)
+	{
 		this->f_p_Number = a.getRawBits();
 	}
 	return *this;
