@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 18:44:40 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/11/26 18:44:43 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/12/01 14:59:05 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void FragTrap::attack(const std::string& target)
 
 void FragTrap::highFivesGuys()
 {
-	std::cout << "a positive high fives request ??" << std::endl;
+	std::cout << "Give me some high fives!" << std::endl;
 }
 
 FragTrap::~FragTrap()

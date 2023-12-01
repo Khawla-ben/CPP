@@ -6,14 +6,14 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 18:54:10 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/11/26 18:54:13 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/12/01 11:01:08 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "Fixed.hpp"
 
-int main( void )
+int main(void)
 {
 	Fixed a;
 	Fixed b(a);

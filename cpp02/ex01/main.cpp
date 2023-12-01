@@ -6,13 +6,13 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 18:54:23 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/11/26 18:54:25 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/12/01 11:01:32 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "Fixed.hpp"
-int main( void )
+
+int main(void)
 {
 	Fixed a;
 	Fixed const b(10);
@@ -29,5 +29,6 @@ int main( void )
 	std::cout << "b is " << b.toInt() << " as integer" << std::endl;
 	std::cout << "c is " << c.toInt() << " as integer" << std::endl;
 	std::cout << "d is " << d.toInt() << " as integer" << std::endl;
+	
 	return 0;
 }

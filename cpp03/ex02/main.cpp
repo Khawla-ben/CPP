@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 18:45:05 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/11/26 18:46:57 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/12/01 14:45:40 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,22 @@
 
 #include "FragTrap.hpp"
 
-// int main()
-// {
-// 	ClapTrap obj("me");
-// 	ClapTrap obj2("ME");
+int main()
+{
+	ClapTrap obj("2");
+	obj.takeDamage(2);
+	obj.attack("enemy");
+	obj.beRepaired(5);
+	obj.takeDamage(5);
 
-// 	obj.takeDamage(2);
-// 	obj.attack("enemy");
-// 	obj.beRepaired(5);
-// 	obj2.takeDamage(5);
+	std::cout << "***********\n";
 	
-// }
+	FragTrap obj2("1");
+
+
+	obj2.takeDamage(2);
+	obj2.attack("enemy");
+	obj2.beRepaired(5);
+	obj2.takeDamage(5);
+	obj2.highFivesGuys();
+}

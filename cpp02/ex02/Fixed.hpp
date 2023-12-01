@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 18:54:34 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/11/30 16:25:46 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/12/01 11:02:06 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,10 +53,10 @@ public:
 	Fixed operator/(const Fixed &a);
 
 
-	Fixed &operator--();//--a
-	Fixed operator--(int);//a--
-	Fixed &operator++();//++a
-	Fixed operator++(int);//a++
+	Fixed &operator--();
+	Fixed operator--(int);
+	Fixed &operator++();
+	Fixed operator++(int);
 
 
 	static Fixed &min(Fixed &a, Fixed &b);

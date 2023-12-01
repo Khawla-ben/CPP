@@ -1,6 +1,7 @@
 CPP
 
 These are some resources I used to do the requirements :
+https://docs.google.com/document/d/14OKEUhT8BQy4mQOb7CkiC50BOFQ9jY7h_vFT2eLlm8Y/edit?pli=1#heading=h.p5hfvyca32u2
 
 
 https://www.geeksforgeeks.org/introduction-of-object-oriented-programming/
@@ -44,7 +45,7 @@ https://www.geeksforgeeks.org/increment-and-decrement-operator-overloading-in-c/
 https://inst.eecs.berkeley.edu/~cs61c/sp06/handout/fixedpt.html
 https://www.ni.com/docs/en-US/bundle/labview-api-ref/page/functions/integer-to-fixed-point-cast.html
 https://www.h-schmidt.net/FloatConverter/IEEE754.html
-
+https://www.geeksforgeeks.org/cpp-polymorphism/
 https://www.geeksforgeeks.org/increment-and-decrement-operator-overloading-in-c/
 
 CPP03:

@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 18:47:19 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/11/26 18:47:22 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/12/01 14:40:05 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "ClapTrap.hpp"
 
 
-class  ScavTrap : private ClapTrap
+class  ScavTrap : public ClapTrap
 {
 public:
 

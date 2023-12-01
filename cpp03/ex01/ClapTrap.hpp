@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 18:47:57 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/11/26 18:48:07 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/12/01 14:49:19 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ public:
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
 
-	void guardGate();
 
 	~ClapTrap();
 };
