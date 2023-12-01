@@ -6,12 +6,15 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 18:54:21 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/11/26 18:54:22 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/11/30 16:12:49 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "Fixed.hpp"
+
+
+const int Fixed::number_frac = 8;
 
 Fixed::Fixed()
 {
@@ -40,7 +43,8 @@ Fixed::Fixed(const Fixed &val)
 Fixed &Fixed::operator=(const Fixed &a)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
-	if (this != &a) { //self-assignment 
+	if (this != &a)
+	{
 		this->f_p_Number = a.f_p_Number;
 	}
 	return *this;
@@ -65,7 +69,7 @@ void Fixed::setRawBits(int const raw)
 
 float Fixed::toFloat(void) const
 {
-	return (float)f_p_Number / (float)(1 << number_frac);
+	return f_p_Number / (float)(1 << number_frac);
 }
 
 int Fixed::toInt(void) const

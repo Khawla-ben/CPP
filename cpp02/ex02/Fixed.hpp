@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 18:54:34 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/11/29 13:01:50 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/11/30 16:25:46 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,12 @@
 
 #include <iostream>
 
-
 class  Fixed
 {
 private:
 
 	int f_p_Number;
-	static const int number_frac = 8;
+	static const int number_frac;
 
 public:
 

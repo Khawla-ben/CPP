@@ -6,12 +6,14 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 18:54:04 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/11/27 21:53:41 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/11/30 21:30:36 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "Fixed.hpp"
+
+const int Fixed::number_frac = 8;
 
 Fixed::Fixed()
 {

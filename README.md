@@ -43,6 +43,7 @@ https://koor.fr/C/cmath/round.wp
 https://www.geeksforgeeks.org/increment-and-decrement-operator-overloading-in-c/
 https://inst.eecs.berkeley.edu/~cs61c/sp06/handout/fixedpt.html
 https://www.ni.com/docs/en-US/bundle/labview-api-ref/page/functions/integer-to-fixed-point-cast.html
+https://www.h-schmidt.net/FloatConverter/IEEE754.html
 
 https://www.geeksforgeeks.org/increment-and-decrement-operator-overloading-in-c/
 

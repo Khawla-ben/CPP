@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 18:54:19 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/11/27 21:59:53 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/11/30 16:09:04 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class  Fixed
 private:
 
 	int f_p_Number;
-	static const int number_frac = 8;
+	static const int number_frac;
 
 public:
 
@@ -30,20 +30,18 @@ public:
 	Fixed(const float NUM);
 
 	Fixed(const Fixed &val);
-	Fixed &operator=(const Fixed &a);//Copy assignment operator called
+	Fixed &operator=(const Fixed &a);
 
 
-	void setRawBits(int const raw ); //that sets the raw value of the fixed-point number.
-	int getRawBits(void) const;//that returns the raw value of the fixed-point value.
+	void setRawBits(int const raw );
+	int getRawBits(void) const;
 
 
-	float toFloat(void) const; // fixed-point to floating-point.
-	int toInt(void) const; //fixed-point to an integer .
+	float toFloat(void) const;
+	int toInt(void) const;
 
 	~Fixed();
 };
 
-std::ostream &operator<<(std::ostream &os, const Fixed &a);//insertion operator
-//inserts a floating-point representation
-	// of the fixed-point number into the output stream object passed as parameter.
+std::ostream &operator<<(std::ostream &os, const Fixed &a);
 

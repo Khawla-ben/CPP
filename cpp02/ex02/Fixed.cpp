@@ -6,13 +6,14 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 18:54:30 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/11/26 18:54:33 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/11/30 16:25:25 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "Fixed.hpp"
 
+const int Fixed::number_frac = 8;
 
 Fixed::Fixed()
 {
@@ -36,7 +37,8 @@ Fixed::Fixed(const Fixed &val)
 
 Fixed &Fixed::operator=(const Fixed &a)
 {
-	if (this != &a) { //self-assignment 
+	if (this != &a)
+	{
 		this->f_p_Number = a.getRawBits();
 	}
 	return *this;
@@ -62,7 +64,6 @@ int Fixed::toInt(void) const
 {
 	return f_p_Number >> number_frac;
 }
-
 
 bool Fixed::operator>(const Fixed &a) const
 {
@@ -94,13 +95,11 @@ bool Fixed::operator!=(const Fixed &a) const
 	return this->f_p_Number != a.f_p_Number;
 }
 
-
 std::ostream &operator<<(std::ostream &os, const Fixed &a)
 {
 	os << a.toFloat();
 	return(os);
 }
-
 
 Fixed &Fixed::operator+(const Fixed &a)
 {
@@ -126,8 +125,6 @@ Fixed Fixed::operator/(const Fixed &a)
 	return (b);
 }
 
-
-
 Fixed &Fixed::operator--()
 {
 	this->f_p_Number--;
@@ -141,19 +138,18 @@ Fixed Fixed::operator--(int)
 	return(b);
 }
 
-Fixed &Fixed::operator++()//++a
+Fixed &Fixed::operator++()
 {
 	this->f_p_Number++;
 	return(*this);
 }
 
-Fixed Fixed::operator++(int)//a++
+Fixed Fixed::operator++(int)
 {
 	Fixed b = *this;
 	this->f_p_Number++;
 	return(b);
 }
-
 
 Fixed& Fixed::min(Fixed &a, Fixed &b)
 {
