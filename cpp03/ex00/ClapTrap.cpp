@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 18:44:23 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/12/02 15:30:06 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/12/02 16:12:10 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ ClapTrap::ClapTrap()
 	this->Name = "Default";
 	this->Hit_points = 10;
 	this->Energy_points = 10;
-	this->Attack_damage = 0;
+	this->Attack_damage = 0; 
 }
 
 ClapTrap::ClapTrap(std::string Name)
 {
-	std::cout << "Constructor called(paramitrized)" << std::endl;
+	std::cout << "Constructor called (paramitrized)" << std::endl;
 	this->Name = Name;
 	this->Hit_points = 10;
 	this->Energy_points = 10;
