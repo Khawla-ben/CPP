@@ -6,15 +6,13 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 18:47:19 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/12/01 14:40:05 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/12/02 15:30:40 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #pragma once
 
 #include "ClapTrap.hpp"
-
 
 class  ScavTrap : public ClapTrap
 {

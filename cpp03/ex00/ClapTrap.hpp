@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 18:50:05 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/11/26 18:50:08 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/12/02 14:40:23 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #pragma once
 
 #include <iostream>
-
 
 class  ClapTrap
 {

@@ -1,6 +1,9 @@
-CPP
+ 
+--*CPP*-- : 
+----------
 
 These are some resources I used to do the requirements :
+
 https://docs.google.com/document/d/14OKEUhT8BQy4mQOb7CkiC50BOFQ9jY7h_vFT2eLlm8Y/edit?pli=1#heading=h.p5hfvyca32u2
 
 
@@ -27,7 +30,6 @@ https://www.geeksforgeeks.org/c-classes-and-objects/?ref=lbp
 
 
 
-
 CPP01:
 -------
 
@@ -51,8 +53,12 @@ https://www.geeksforgeeks.org/increment-and-decrement-operator-overloading-in-c/
 CPP03:
 ------
 
-https://github.com/qingqingqingli/CPP/wiki/Module03
+https://isocpp.org/wiki/faq/multiple-inheritance
 https://www.geeksforgeeks.org/inheritance-in-c/?ref=lbp
 https://www.geeksforgeeks.org/cpp-polymorphism/
 https://www.w3schools.com/cpp/cpp_inheritance.asp
+https://github.com/qingqingqingli/CPP/wiki/Module03
 https://www.w3schools.com/cpp/cpp_inheritance_access.asp
+
+CPP04 :
+-------

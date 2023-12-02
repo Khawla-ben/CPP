@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 18:44:40 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/12/01 14:59:05 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/12/02 15:36:20 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ FragTrap::FragTrap(std::string Name) : ClapTrap(Name)
 	this->Attack_damage = 30;
 }
 
-
 FragTrap::FragTrap(const FragTrap &val) : ClapTrap(val) {}
 
 FragTrap &FragTrap::operator=(const FragTrap &a)
@@ -37,19 +36,10 @@ FragTrap &FragTrap::operator=(const FragTrap &a)
 	return *this;
 }
 
-void FragTrap::attack(const std::string& target)
-{
-	if (Hit_points >= 0 && Energy_points >= 0)
-	{
-		std::cout <<  "FragTrap " << Name << " attacks " <<  target << ", causing " << Attack_damage << " points of damage !"<< std::endl;
-		this->Hit_points -= Attack_damage;
-		this->Energy_points -= 1;
-	}
-}
-
 void FragTrap::highFivesGuys()
 {
-	std::cout << "Give me some high fives!" << std::endl;
+	if (Hit_points > 0)
+		std::cout << "Give me some high fives!" << std::endl;
 }
 
 FragTrap::~FragTrap()

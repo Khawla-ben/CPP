@@ -6,9 +6,10 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 18:47:25 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/12/02 15:30:35 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/12/02 15:28:36 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "ScavTrap.hpp"
 
@@ -22,6 +23,7 @@ ScavTrap::ScavTrap(std::string Name) : ClapTrap(Name)
 	this->Energy_points = 50;
 	this->Attack_damage = 20;
 }
+
 
 ScavTrap::ScavTrap(const ScavTrap &val) : ClapTrap(val) {}
 
