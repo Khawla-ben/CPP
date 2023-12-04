@@ -1,36 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/01 16:17:16 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/12/03 15:00:39 by kben-ham         ###   ########.fr       */
+/*   Created: 2023/12/01 16:03:58 by kben-ham          #+#    #+#             */
+/*   Updated: 2023/12/01 17:25:05 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Animal.hpp"
 
-#include "Dog.hpp"
-
-Dog::Dog()
+Animal::Animal()
 {
-	std::cout << "Constructor of Dog called" << std::endl;
-	this->type= "Dog";
+	std::cout << "Constructor of Animal called" << std::endl;
+	this->type= "Animal";
 }
 
-Dog::Dog(const Dog &val)
+
+Animal::Animal(std::string type)
+{
+	std::cout << "Constructor called (paramitrized)" << std::endl;
+	this->type = type;
+}
+
+Animal::Animal(const Animal &val)
 {
 	std::cout << "Copy constructor called " << std::endl;
 	*this = val;
 }
 
-void Dog::makeSound() const
+void Animal::makeSound() const
 {
-	std::cout << type << " is Barking" << std::endl;
+	std::cout << type << " is making his own Sound" << std::endl;
 }
 
-Dog &Dog::operator=(const Dog &a)
+const std::string& Animal::getType() const
+{
+	return this->type;
+}
+
+Animal &Animal::operator=(const Animal &a)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &a)
@@ -40,7 +51,7 @@ Dog &Dog::operator=(const Dog &a)
 	return *this;
 }
 
-Dog::~Dog()
+Animal::~Animal()
 {
-	std::cout << "Destructor of Dog called" << std::endl;
+	std::cout << "Destructor of Animal called" << std::endl;
 }

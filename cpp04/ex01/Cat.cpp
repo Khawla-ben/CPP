@@ -1,46 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/01 16:17:16 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/12/03 15:00:39 by kben-ham         ###   ########.fr       */
+/*   Created: 2023/12/01 16:11:27 by kben-ham          #+#    #+#             */
+/*   Updated: 2023/12/04 14:21:17 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Cat.hpp"
 
-#include "Dog.hpp"
-
-Dog::Dog()
+Cat::Cat()
 {
-	std::cout << "Constructor of Dog called" << std::endl;
-	this->type= "Dog";
+	std::cout << "Constructor of Cat called" << std::endl;
+	this->attribute = new Brain();
+	this->type= "Cat";
 }
 
-Dog::Dog(const Dog &val)
+Cat::Cat(const Cat &val)
 {
 	std::cout << "Copy constructor called " << std::endl;
+	this->attribute = NULL;
 	*this = val;
 }
 
-void Dog::makeSound() const
+void Cat::makeSound() const
 {
-	std::cout << type << " is Barking" << std::endl;
+	std::cout << type << " is Meowing " << std::endl;
 }
 
-Dog &Dog::operator=(const Dog &a)
+Cat &Cat::operator=(const Cat &a)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &a)
 	{
-		this->type = a.type;
+		if (this->attribute)
+			delete attribute;
+		this->attribute = new Brain();
 	}
 	return *this;
 }
 
-Dog::~Dog()
+Cat::~Cat()
 {
-	std::cout << "Destructor of Dog called" << std::endl;
+	delete (attribute);
+	std::cout << "Destructor of Cat called" << std::endl;
 }

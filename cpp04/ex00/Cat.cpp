@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 16:11:27 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/12/01 17:41:39 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/12/03 15:00:13 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,11 @@ Cat::Cat()
 	this->type= "Cat";
 }
 
-
-Cat::Cat(std::string type)
+Cat::Cat(const Cat &val)
 {
-	std::cout << "Constructor called (paramitrized)" << std::endl;
-	this->type = type;
+	std::cout << "Copy constructor called " << std::endl;
+	*this = val;
 }
-
-Cat::Cat(const Cat &val) : Animal(val) {}
-
 
 void Cat::makeSound() const
 {

@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/01 15:08:52 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/12/03 14:36:30 by kben-ham         ###   ########.fr       */
+/*   Created: 2023/12/01 16:09:12 by kben-ham          #+#    #+#             */
+/*   Updated: 2023/12/04 14:12:26 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #pragma once
 
-#include <iostream>
+#include "Animal.hpp"
+#include "Brain.hpp"
 
-class  Animal
+
+class  Cat : public Animal
 {
-protected:
-
-	std::string type;
-
+	Brain *attribute;
 public:
 
-	Animal();
-	Animal(std::string &type);
+	Cat();
 
-	Animal(const Animal &val);
-	Animal &operator=(const Animal &a);
+	Cat(const Cat &val);
+	Cat &operator=(const Cat &a);
 
-	const std::string& getType()const;
-	virtual void makeSound() const;
-
-	virtual ~Animal();
+	void makeSound() const;
+	
+	~Cat();
+	
 };

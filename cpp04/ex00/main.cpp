@@ -6,11 +6,12 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 16:17:52 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/12/01 20:47:30 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/12/03 15:21:00 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
+#include "WrongCat.hpp"
 #include "Dog.hpp"
 
 int main()
@@ -25,9 +26,16 @@ int main()
 	j->makeSound();
 	meta->makeSound();
 	
+	std::cout << "*****************"<< std::endl;
+
+	const WrongAnimal* Wrong = new WrongCat();
+	std::cout << Wrong->getType() << " " << std::endl;
+	Wrong->makeSound();
+	
 	delete (meta);
 	delete (i);
 	delete (j);
+	delete (Wrong);
 	
 	return 0;
 }

@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/01 16:17:16 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/12/03 15:00:39 by kben-ham         ###   ########.fr       */
+/*   Created: 2023/12/02 20:42:33 by kben-ham          #+#    #+#             */
+/*   Updated: 2023/12/02 20:47:11 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "WrongCat.hpp"
 
-#include "Dog.hpp"
-
-Dog::Dog()
+WrongCat::WrongCat()
 {
-	std::cout << "Constructor of Dog called" << std::endl;
-	this->type= "Dog";
+	std::cout << "Constructor of WrongCat called" << std::endl;
+	this->type= "WrongCat";
 }
 
-Dog::Dog(const Dog &val)
+WrongCat::WrongCat(std::string type)
 {
-	std::cout << "Copy constructor called " << std::endl;
-	*this = val;
+	std::cout << "Constructor called (paramitrized)" << std::endl;
+	this->type = type;
 }
 
-void Dog::makeSound() const
+WrongCat::WrongCat(const WrongCat &val) : WrongAnimal(val) {}
+
+void WrongCat::makeSound() const
 {
-	std::cout << type << " is Barking" << std::endl;
+	std::cout << type << " is Meowing " << std::endl;
 }
 
-Dog &Dog::operator=(const Dog &a)
+WrongCat &WrongCat::operator=(const WrongCat &a)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &a)
@@ -40,7 +41,7 @@ Dog &Dog::operator=(const Dog &a)
 	return *this;
 }
 
-Dog::~Dog()
+WrongCat::~WrongCat()
 {
-	std::cout << "Destructor of Dog called" << std::endl;
+	std::cout << "Destructor of Cat called" << std::endl;
 }

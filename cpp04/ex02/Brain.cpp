@@ -1,46 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/01 16:17:16 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/12/03 15:00:39 by kben-ham         ###   ########.fr       */
+/*   Created: 2023/12/03 12:33:34 by kben-ham          #+#    #+#             */
+/*   Updated: 2023/12/03 16:25:22 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Brain.hpp"
 
-#include "Dog.hpp"
-
-Dog::Dog()
+Brain::Brain()
 {
-	std::cout << "Constructor of Dog called" << std::endl;
-	this->type= "Dog";
+	std::cout << "Constructor of Brain called" << std::endl;
 }
 
-Dog::Dog(const Dog &val)
+
+Brain::Brain(const Brain &val)
 {
 	std::cout << "Copy constructor called " << std::endl;
 	*this = val;
 }
 
-void Dog::makeSound() const
-{
-	std::cout << type << " is Barking" << std::endl;
-}
-
-Dog &Dog::operator=(const Dog &a)
+Brain &Brain::operator=(const Brain &a)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &a)
 	{
-		this->type = a.type;
+		for(int i= 0; i < 100 ; i++)
+		{
+			this->ideas[i] = a.ideas[i];
+		}
 	}
 	return *this;
 }
 
-Dog::~Dog()
+Brain::~Brain()
 {
-	std::cout << "Destructor of Dog called" << std::endl;
+	std::cout << "Destructor of Brain called" << std::endl;
 }

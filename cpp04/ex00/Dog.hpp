@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 16:09:15 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/12/01 17:21:15 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/12/03 15:00:45 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ class  Dog : public Animal
 public:
 
 	Dog();
-	Dog(std::string Name);
 
 	Dog(const Dog &val);
 	Dog &operator=(const Dog &a);
