@@ -64,5 +64,8 @@ https://github.com/qingqingqingli/CPP/wiki/Module03
 
 CPP04 :
 -------
-
-https://www.geeksforgeeks.org/cpp-polymorphism/
+https://www.geeksforgeeks.org/cpp-polymorphism/?ref=lbp
+https://www.geeksforgeeks.org/function-overriding-in-cpp/?ref=lbp
+https://www.geeksforgeeks.org/virtual-functions-and-runtime-polymorphism-in-cpp/?ref=lbp
+https://www.geeksforgeeks.org/pure-virtual-functions-and-abstract-classes/
+https://www.geeksforgeeks.org/pure-virtual-destructor-c/?ref=lbp
