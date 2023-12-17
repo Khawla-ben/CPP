@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 16:11:27 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/12/04 14:21:17 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/12/05 13:50:58 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Cat::Cat()
 
 Cat::Cat(const Cat &val)
 {
-	std::cout << "Copy constructor called " << std::endl;
+	std::cout << "Copy constructor called (Cat)" << std::endl;
 	this->attribute = NULL;
 	*this = val;
 }
@@ -33,12 +33,13 @@ void Cat::makeSound() const
 
 Cat &Cat::operator=(const Cat &a)
 {
-	std::cout << "Copy assignment operator called" << std::endl;
+	std::cout << "Copy assignment operator called (Cat)" << std::endl;
 	if (this != &a)
 	{
 		if (this->attribute)
 			delete attribute;
 		this->attribute = new Brain();
+		*this->attribute = *a.attribute;
 	}
 	return *this;
 }

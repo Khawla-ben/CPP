@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 16:09:15 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/12/03 16:27:47 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/12/05 13:39:41 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ public:
 
 	Dog();
 
-	// Dog(const Dog &val);
+	Dog(const Dog &val);
 	Dog &operator=(const Dog &a);
 
 	void makeSound() const;

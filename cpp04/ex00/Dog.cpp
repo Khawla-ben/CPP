@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 16:17:16 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/12/03 15:00:39 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/12/05 11:35:42 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 Dog::Dog()
 {
 	std::cout << "Constructor of Dog called" << std::endl;
-	this->type= "Dog";
+	this->type = "Dog";
 }
 
 Dog::Dog(const Dog &val)

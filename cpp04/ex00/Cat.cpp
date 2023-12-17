@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 16:11:27 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/12/03 15:00:13 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/12/05 11:35:29 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 Cat::Cat()
 {
 	std::cout << "Constructor of Cat called" << std::endl;
-	this->type= "Cat";
+	this->type = "Cat";
 }
 
 Cat::Cat(const Cat &val)

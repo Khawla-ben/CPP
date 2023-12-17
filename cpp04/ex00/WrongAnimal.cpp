@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 20:42:31 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/12/02 20:46:12 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/12/05 13:37:09 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ WrongAnimal::WrongAnimal(std::string type)
 
 WrongAnimal::WrongAnimal(const WrongAnimal &val)
 {
-	std::cout << "Copy constructor called " << std::endl;
+	std::cout << "Copy constructor called (WrongAnimal)" << std::endl;
 	*this = val;
 }
 

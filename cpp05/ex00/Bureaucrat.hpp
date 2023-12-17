@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 18:52:08 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/12/17 13:05:44 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/12/17 13:25:34 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ public:
 	
 	void incrementGrade();
 	void decrementGrade();
-	const int& getGrade() const;
+	int	getGrade() const;
 	const std::string& getName() const;
 	~Bureaucrat();
 	//Nested class

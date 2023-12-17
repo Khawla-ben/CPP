@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 16:17:16 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/12/04 14:23:59 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/12/05 13:35:03 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Dog::Dog()
 
 Dog::Dog(const Dog &val)
 {
-	std::cout << "Copy constructor called " << std::endl;
+	std::cout << "Copy constructor called (Dog)" << std::endl;
 	this->attribute = NULL;
 	*this = val;
 }
@@ -34,12 +34,13 @@ void Dog::makeSound() const
 
 Dog &Dog::operator=(const Dog &a)
 {
-	std::cout << "Copy assignment operator called" << std::endl;
+	std::cout << "Copy assignment operator called (Dog)" << std::endl;
 	if (this != &a)
 	{
 		if (this->attribute)
 			delete attribute;
 		this->attribute = new Brain();
+		*this->attribute = *a.attribute;
 	}
 	return *this;
 }

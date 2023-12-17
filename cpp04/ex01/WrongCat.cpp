@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 20:42:33 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/12/02 20:47:11 by kben-ham         ###   ########.fr       */
+/*   Updated: 2023/12/05 13:37:24 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,7 @@
 WrongCat::WrongCat()
 {
 	std::cout << "Constructor of WrongCat called" << std::endl;
-	this->type= "WrongCat";
-}
-
-WrongCat::WrongCat(std::string type)
-{
-	std::cout << "Constructor called (paramitrized)" << std::endl;
-	this->type = type;
+	this->type = "WrongCat";
 }
 
 WrongCat::WrongCat(const WrongCat &val) : WrongAnimal(val) {}
