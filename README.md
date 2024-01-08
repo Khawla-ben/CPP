@@ -5,28 +5,19 @@
 These are some resources I used to do the requirements :
 
 https://docs.google.com/document/d/14OKEUhT8BQy4mQOb7CkiC50BOFQ9jY7h_vFT2eLlm8Y/edit?pli=1#heading=h.p5hfvyca32u2
-
-
-https://www.geeksforgeeks.org/introduction-of-object-oriented-programming/
-https://docs.google.com/document/d/14OKEUhT8BQy4mQOb7CkiC50BOFQ9jY7h_vFT2eLlm8Y/edit?pli=1#heading=h.p5hfvyca32u2
-https://www.geeksforgeeks.org/c-classes-and-objects/?ref=lbp
-https://www.geeksforgeeks.org/c-classes-and-objects/
-https://www.geeksforgeeks.org/basic-input-output-c/
 https://www.youtube.com/watch?v=wJ1L2nSIV1s
-
-
-https://accu.org/journals/overload/31/176/wu/
-https://cplusplus.com/reference/iostream/
-
-https://www.geeksforgeeks.org/copy-constructor-in-cpp/
-https://www.geeksforgeeks.org/c-classes-and-objects/?ref=lbp
-https://www.geeksforgeeks.org/basic-input-output-c/
-
 
 CPP00:
 -------
+
+https://www.learncpp.com/
+https://cplusplus.com/reference/iostream/
+https://accu.org/journals/overload/31/176/wu/
 https://www.geeksforgeeks.org/basic-input-output-c/
+https://www.geeksforgeeks.org/c-classes-and-objects/
+https://www.geeksforgeeks.org/copy-constructor-in-cpp/
 https://www.geeksforgeeks.org/c-classes-and-objects/?ref=lbp
+https://www.geeksforgeeks.org/introduction-of-object-oriented-programming/
 
 
 
@@ -64,8 +55,22 @@ https://github.com/qingqingqingli/CPP/wiki/Module03
 
 CPP04 :
 -------
+
 https://www.geeksforgeeks.org/cpp-polymorphism/?ref=lbp
 https://www.geeksforgeeks.org/function-overriding-in-cpp/?ref=lbp
 https://www.geeksforgeeks.org/virtual-functions-and-runtime-polymorphism-in-cpp/?ref=lbp
 https://www.geeksforgeeks.org/pure-virtual-functions-and-abstract-classes/
 https://www.geeksforgeeks.org/pure-virtual-destructor-c/?ref=lbp
+
+CPP05 :
+-------
+
+https://www.geeksforgeeks.org/exception-handling-c/
+https://www.geeksforgeeks.org/rand-and-srand-in-ccpp/
+https://www.learncpp.com/cpp-tutorial/basic-exception-handling/
+https://www.geeksforgeeks.org/c-plus-plus-gq/exception-handling-gq/
+https://www.geeksforgeeks.org/exception-handling-using-classes-in-cpp/?ref=lbp
+https://en.cppreference.com/w/cpp/language/exceptions
+https://www.w3schools.com/cpp/cpp_exceptions.asp#:~:text=Exception%20handling%20in%20C%2B%2B%20consist,us%20create%20a%20custom%20error.
+
+
