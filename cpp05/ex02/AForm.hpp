@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
+/*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/08 18:52:08 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/12/31 13:43:48 by kben-ham         ###   ########.fr       */
+/*   Created: 2023/12/17 14:10:14 by kben-ham          #+#    #+#             */
+/*   Updated: 2024/01/08 15:05:14 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,33 @@
 #include <iostream>
 #include <exception>
 
+class Bureaucrat;
 
-class  Bureaucrat
+class  AForm
 {
 private:
 	const std::string Name;
-	int Grade;
+	bool isSigned;
+	const int Grade_s;
+	const int Grade_e;
 
 public:
 
-	Bureaucrat();
-	Bureaucrat(const std::string &Name, int Grade);
+	AForm();
+	AForm(const std::string &name, int grade_s, int grade_e);
 
-	Bureaucrat(const Bureaucrat &val);
-	Bureaucrat &operator=(const Bureaucrat &a);
+	AForm(const AForm &val);
+	AForm &operator=(const AForm &a);
 
+	int getGrade_s() const;
+	int getGrade_e() const;
+	bool getbool() const;
+	const std::string& getName() const;
+	void beSigned(Bureaucrat &a);
 	
-	void incrementGrade();
-	void decrementGrade();
-	int	getGrade() const;
-	const std::string getName() const;
-	~Bureaucrat();
+	virtual void execute(Bureaucrat const & executor) const = 0;
+
+	~AForm();
 	//Nested class
 	class GradeTooHighException : public std::exception
 	{
@@ -49,6 +55,4 @@ public:
 	};
 };
 
-std::ostream &operator<<(std::ostream &val,const Bureaucrat &a);
-
-
+std::ostream &operator<<(std::ostream &val,const AForm &a);

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
+/*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/08 18:52:08 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/12/31 13:43:48 by kben-ham         ###   ########.fr       */
+/*   Created: 2023/12/17 14:10:14 by kben-ham          #+#    #+#             */
+/*   Updated: 2023/12/31 13:32:42 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,31 @@
 
 #include <iostream>
 #include <exception>
+class Bureaucrat;
 
-
-class  Bureaucrat
+class  Form
 {
 private:
 	const std::string Name;
-	int Grade;
+	bool isSigned;
+	const int Grade_s;
+	const int Grade_e;
 
 public:
 
-	Bureaucrat();
-	Bureaucrat(const std::string &Name, int Grade);
+	Form();
+	Form(const std::string &name, const int &grade_s, const int &grade_e);
 
-	Bureaucrat(const Bureaucrat &val);
-	Bureaucrat &operator=(const Bureaucrat &a);
+	Form(const Form &val);
+	Form &operator=(const Form &a);
 
-	
-	void incrementGrade();
-	void decrementGrade();
-	int	getGrade() const;
+	int getGrade_s() const;
+	int getGrade_e() const;
+	bool getbool() const;
 	const std::string getName() const;
-	~Bureaucrat();
+	
+	void beSigned(Bureaucrat &a);
+	~Form();
 	//Nested class
 	class GradeTooHighException : public std::exception
 	{
@@ -49,6 +52,4 @@ public:
 	};
 };
 
-std::ostream &operator<<(std::ostream &val,const Bureaucrat &a);
-
-
+std::ostream &operator<<(std::ostream &val,const Form &a);
