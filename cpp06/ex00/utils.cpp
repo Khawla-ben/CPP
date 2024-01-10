@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/26 16:27:46 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/12/26 16:36:02 by kben-ham         ###   ########.fr       */
+/*   Updated: 2024/01/10 22:24:25 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,7 @@ void char_and_else(std::string &s, int check)
 		std::cout << "double: " << "impossible " << std::endl;
 	}
 }
+
 void double_float_int(std::string &s)
 {
 	double a = std::strtod(s.c_str(),NULL);

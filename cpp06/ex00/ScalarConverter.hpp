@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 13:48:25 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/12/26 16:32:54 by kben-ham         ###   ########.fr       */
+/*   Updated: 2024/01/10 22:21:41 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,8 @@
 
 class  ScalarConverter
 {
-
-public:
 	ScalarConverter();
+public:
 	ScalarConverter(const ScalarConverter &val);
 	ScalarConverter &operator=(const ScalarConverter &a);
 	static void convert(std::string &string);
