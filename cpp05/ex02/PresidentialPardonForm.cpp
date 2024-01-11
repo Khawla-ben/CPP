@@ -6,19 +6,19 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 17:41:59 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/12/23 13:05:05 by kben-ham         ###   ########.fr       */
+/*   Updated: 2024/01/11 04:53:59 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 #include "Bureaucrat.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm() : AForm("PresidentialPardonForm", 25, 05)
+PresidentialPardonForm::PresidentialPardonForm() : AForm("PresidentialPardonForm", 25, 5)
 {
 	std::cout << "Constructor of PresidentialPardonForm called" << std::endl;
 }
 
-PresidentialPardonForm::PresidentialPardonForm(const std::string &Name) : AForm(Name, 25, 05) {
+PresidentialPardonForm::PresidentialPardonForm(const std::string &Name) : AForm(Name, 25, 5) {
 	std::cout << "Constructor of PresidentialPardonForm called (Para)" << std::endl;
 }
 

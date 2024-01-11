@@ -71,6 +71,19 @@ https://www.learncpp.com/cpp-tutorial/basic-exception-handling/
 https://www.geeksforgeeks.org/c-plus-plus-gq/exception-handling-gq/
 https://www.geeksforgeeks.org/exception-handling-using-classes-in-cpp/?ref=lbp
 https://en.cppreference.com/w/cpp/language/exceptions
+https://www.learncpp.com/cpp-tutorial/exceptions-functions-and-stack-unwinding/
 https://www.w3schools.com/cpp/cpp_exceptions.asp#:~:text=Exception%20handling%20in%20C%2B%2B%20consist,us%20create%20a%20custom%20error.
 
 
+CPP06 :
+------
+https://www.geeksforgeeks.org/static_cast-in-cpp/
+https://www.tutorialspoint.com/cplusplus/cpp_casting_operators.htm
+https://www.geeksforgeeks.org/dynamic-_cast-in-cpp/
+https://www.youtube.com/watch?v=CiHfz6pTolQ&ab_channel=TheCherno
+https://www.geeksforgeeks.org/casting-operators-in-cpp/
+https://www.learncpp.com/cpp-tutorial/dynamic-casting/
+https://www.geeksforgeeks.org/dynamic-_cast-in-cpp/
+https://www.geeksforgeeks.org/const_cast-in-c-type-casting-operators/
+https://www.geeksforgeeks.org/reinterpret_cast-in-c-type-casting-operators/
+https://www.learncpp.com/cpp-tutorial/explicit-type-conversion-casting-and-static-cast/
