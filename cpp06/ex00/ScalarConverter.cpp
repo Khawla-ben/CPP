@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 13:48:23 by kben-ham          #+#    #+#             */
-/*   Updated: 2023/12/26 16:31:52 by kben-ham         ###   ########.fr       */
+/*   Updated: 2024/01/11 06:29:58 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ ScalarConverter &ScalarConverter::operator=(const ScalarConverter &a)
 void ScalarConverter::convert(std::string &string)
 {
 	int check = find_type(string);
+	
+	// std::cout << check;
 	convert_string(string, check);
 }
 ScalarConverter::~ScalarConverter(){}
