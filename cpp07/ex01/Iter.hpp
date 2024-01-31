@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 06:36:15 by kben-ham          #+#    #+#             */
-/*   Updated: 2024/01/19 23:54:01 by kben-ham         ###   ########.fr       */
+/*   Updated: 2024/01/31 16:14:59 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,9 @@
 template <typename T, typename U>
 void function(U &a)
 {
-    // U j = 0;
-    // U j = T();
-    // a = j;
-    std::cout << a << std::endl;
+    U j = T();
+    a = j;
+    std::cout << a << " " ;
 }
 
 template <typename T, typename U, typename S>
