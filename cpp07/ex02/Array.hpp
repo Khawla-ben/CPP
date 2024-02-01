@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/20 02:13:47 by kben-ham          #+#    #+#             */
-/*   Updated: 2024/01/31 17:06:43 by kben-ham         ###   ########.fr       */
+/*   Updated: 2024/02/01 22:17:23 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,50 +16,50 @@ template <typename T>
 class Array
 {
 private:
-	T *A;
+	T *Ar;
 	unsigned int size;
 public:
 	Array()
 	 : size(0)
 	{
-	   A = new T[size];
+	   Ar = new T[size];
 	}
 	Array(unsigned int n)
 	{
-	   A = new T[n];
+	   Ar = new T[n];
 	   this->size = n;
 	   for(unsigned int i = 0; i < n; i++)
     	{
-    	    A[i] = T();
+    	    Ar[i] = T();
     	}
 	}
 	Array(const Array<T> &_Array)
 	{
 		this->size = _Array.size;
-		this->A = new T[this->size];
+		this->Ar = new T[this->size];
 		for(unsigned int i = 0; i < this->size; i++)
-			this->A[i] = _Array.A[i];
+			this->Ar[i] = _Array.Ar[i];
 	}
 	
     Array<T> &operator= (const Array<T> &_Array)
 	{
-		if(this->A)
-			delete [] this->A;
+		if(this->Ar)
+			delete [] this->Ar;
 		this->size = _Array.size;
-		this->A = new T[this->size];
+		this->Ar = new T[this->size];
 		for(unsigned int i = 0; i < this->size; i++)
-			this->A[i] = _Array.A[i];
+			this->Ar[i] = _Array.Ar[i];
 		return *this;
 	}
 	
     T &operator[](unsigned int num)
 	{
-		if (num >= this->size)
+		if (num >= this->size || num < 0)
 			throw std::out_of_range("OUT OF RANGE!!");
-		return this->A[num];
+		return this->Ar[num];
 	}
 
-	int &getSize()
+	unsigned int &getSize()
 	{
 		return(this->size);
 	}

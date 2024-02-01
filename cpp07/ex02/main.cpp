@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/20 02:13:49 by kben-ham          #+#    #+#             */
-/*   Updated: 2024/01/31 17:03:15 by kben-ham         ###   ########.fr       */
+/*   Updated: 2024/02/01 22:25:39 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,53 +14,21 @@
 #include <iostream>
 #include <Array.hpp>
 
-#define MAX_VAL 750
+
 int main(int, char**)
 {
-    Array<int> numbers(MAX_VAL);
-    int* mirror = new int[MAX_VAL];
-    srand(time(NULL));
-    for (int i = 0; i < MAX_VAL; i++)
-    {
-        const int value = rand();
-        numbers[i] = value;
-        mirror[i] = value;
-    }
-    //SCOPE
-    {
-        Array<int> tmp = numbers;
-        Array<int> test(tmp);
-    }
-
-    for (int i = 0; i < MAX_VAL; i++)
-    {
-        if (mirror[i] != numbers[i])
-        {
-            std::cerr << "didn't save the same value!!" << std::endl;
-            return 1;
-        }
-    }
+    Array<int> *tmp = new Array<int>();
+    std::cout << tmp->getSize() << std::endl;
+    // delete tmp;
+    Array<int> tmp2(10);
+    std::cout << tmp2.getSize() << std::endl;
     try
     {
-        numbers[-2] = 0;
+        tmp2[-1] = 0;
     }
     catch(const std::exception& e)
     {
         std::cerr << e.what() << '\n';
     }
-    try
-    {
-        numbers[MAX_VAL] = 0;
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
-
-    for (int i = 0; i < MAX_VAL; i++)
-    {
-        numbers[i] = rand();
-    }
-    delete [] mirror;//
-    return 0;
+    
 }
