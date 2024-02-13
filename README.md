@@ -87,3 +87,25 @@ https://www.geeksforgeeks.org/dynamic-_cast-in-cpp/
 https://www.geeksforgeeks.org/const_cast-in-c-type-casting-operators/
 https://www.geeksforgeeks.org/reinterpret_cast-in-c-type-casting-operators/
 https://www.learncpp.com/cpp-tutorial/explicit-type-conversion-casting-and-static-cast/
+
+
+
+CPP07 :
+------
+https://en.cppreference.com/w/cpp/error/out_of_range
+https://www.learncpp.com/cpp-tutorial/function-template-instantiation/
+https://www.learncpp.com/cpp-tutorial/function-templates-with-multiple-template-types/
+https://cdn.intra.42.fr/pdf/pdf/113510/en.subject.pdf
+https://www.geeksforgeeks.org/templates-cpp/
+https://www.geeksforgeeks.org/templates-and-static-variables-in-c/
+https://cpp.developpez.com/cours/cpp/?page=page_14#LXIV-C-1
+
+
+CPP08 :
+------
+https://www.geeksforgeeks.org/vector-in-cpp-stl/
+https://www.geeksforgeeks.org/sequence-vs-associative-containers-cpp/
+https://www.geeksforgeeks.org/deque-cpp-stl/
+https://www.geeksforgeeks.org/vector-insert-function-in-cpp-stl/
+https://www.geeksforgeeks.org/c-magicians-stl-algorithms/
+https://www.geeksforgeeks.org/stack-in-cpp-stl/
