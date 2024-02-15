@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   whatever.hpp                                       :+:      :+:    :+:   */
+/*   Whatever.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 05:30:04 by kben-ham          #+#    #+#             */
-/*   Updated: 2024/01/19 06:36:45 by kben-ham         ###   ########.fr       */
+/*   Updated: 2024/02/15 17:49:23 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void swap(T& value1, T& value2)
 template <typename T>
 const T min(T& value1, T& value2)
 {
-	if(value1 > value2)
+	if(value1 >= value2)
         return value2;
     return value1;
 }
@@ -33,7 +33,7 @@ const T min(T& value1, T& value2)
 template <typename T>
 const T max(T& value1, T& value2)
 {
-    if(value1 < value2)
+    if(value1 <= value2)
         return value2;
     return value1;
 }
