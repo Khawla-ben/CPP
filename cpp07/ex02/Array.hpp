@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/20 02:13:47 by kben-ham          #+#    #+#             */
-/*   Updated: 2024/02/16 14:19:16 by kben-ham         ###   ########.fr       */
+/*   Updated: 2024/02/16 18:01:16 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ public:
 		return *this;
 	}
 	
-    T &operator[](unsigned int num)
+    T &operator[](unsigned int num) const
 	{
 		if (num >= this->size || num < 0 || this->size == 0)
 			throw std::out_of_range("OUT OF RANGE!!");
