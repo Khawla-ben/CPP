@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/20 02:13:49 by kben-ham          #+#    #+#             */
-/*   Updated: 2024/02/16 18:02:30 by kben-ham         ###   ########.fr       */
+/*   Updated: 2024/02/17 19:22:52 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,14 @@ int main(int, char**)
     {
         std::cerr << e.what() << '\n';
     }
-    /*******/
     const Array<int> x;
-    x[5];
-    x[5] = 5;
+    try
+    {
+        x[5];
+        x[5] = 5;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
 }
