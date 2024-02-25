@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/25 11:19:24 by kben-ham          #+#    #+#             */
-/*   Updated: 2024/02/25 12:28:17 by kben-ham         ###   ########.fr       */
+/*   Updated: 2024/02/25 21:03:25 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,6 @@ Rpn::Rpn(const std::string &input)
                 }
                 num_stack.push(val1 / val2);
             }
-            else if (input[i] == '^')
-                num_stack.push(pow(val1, val2));
         }
     }
     std::cout << num_stack.top() << std::endl;
