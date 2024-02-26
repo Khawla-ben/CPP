@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 23:31:41 by kben-ham          #+#    #+#             */
-/*   Updated: 2024/02/25 23:54:37 by kben-ham         ###   ########.fr       */
+/*   Updated: 2024/02/26 12:54:17 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,20 +22,20 @@
 class  BitcoinExchange
 {
 private:
+	BitcoinExchange();
 	std::map<std::string, double> myMap;
-	size_t limit;
+	size_t limit, tmp;
 	std::string str, str2;
-	// int start_year;
+	std::string start_year;
 	std::string line;
 	double price_double;
 
 
 public:
 
-	BitcoinExchange();
 	BitcoinExchange(std::string input_file);
-	// BitcoinExchange(const BitcoinExchange &val);
-	// BitcoinExchange &operator=(const BitcoinExchange &a);
+	BitcoinExchange(const BitcoinExchange &val);
+	BitcoinExchange &operator=(const BitcoinExchange &a);
 	~BitcoinExchange();
 
     int fillmap();
@@ -43,5 +43,6 @@ public:
     int check_date();
     int check_value();
 	int check_price();
+	void search_and_calculate();
 
 };

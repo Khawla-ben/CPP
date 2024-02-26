@@ -6,29 +6,11 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 23:32:15 by kben-ham          #+#    #+#             */
-/*   Updated: 2024/02/25 23:55:15 by kben-ham         ###   ########.fr       */
+/*   Updated: 2024/02/26 12:55:21 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "BitcoinExchange.hpp"
-
-
-int BitcoinExchange::check_price()
-{
-    int num = 0;
-    for (size_t i = 0; i < str2.size(); i++)
-    {
-        if (str2[i] == ',')
-            num++;
-        else if ((!isdigit(str2[i]) && str2[i] != ',') || num > 2) //wach , ola .
-        {
-            std::cout << "Error: bad input5 => " << line << std::endl;
-            return (1);
-        }
-    }
-    return (0);
-}
 
 int BitcoinExchange::check_num_pipe_space()
 {
@@ -49,11 +31,27 @@ int BitcoinExchange::check_num_pipe_space()
     return (0);
 }
 
+int BitcoinExchange::check_price()
+{
+    tmp = 0;
+    for (size_t i = 0; i < str2.size(); i++)
+    {
+        if (str2[i] == '.')
+            tmp++;
+        else if ((!isdigit(str2[i]) && str2[i] != '.') || tmp > 1 || str2[str2.size() - 1] == '.')
+        {
+            std::cout << "Error: bad input5 => " << line << std::endl;
+            return (1);
+        }
+    }
+    return (0);
+}
+
 int BitcoinExchange::check_value()
 {
     str = line.substr(0, limit - 1);
     str2 = line.substr(limit + 2, line.size());
-    if(check_price())
+    if (check_price())
         return (1);
     std::stringstream price(str2);
     price >> price_double;
@@ -87,13 +85,13 @@ int BitcoinExchange::check_date()
         splitParts.push_back(part_double);
         
     }
-    if (splitParts.size() != 3 || (splitParts[1] < 1 || splitParts[1] > 12) || (splitParts[2] < 1 || splitParts[2] > 31) || (splitParts[0] < 2009 || splitParts[0] > 2023)) //check the date if it's valid
+    if (splitParts.size() != 3 || (splitParts[1] < 1 || splitParts[1] > 12) || (splitParts[2] < 1 || splitParts[2] > 31) || (splitParts[0] < 2009 || splitParts[0] > 2023))
     {
         std::cout << "Error: bad input2 => " << line << std::endl;
         return (1);
     }
     int tmp = splitParts[0];
-    if (((tmp % 4) == 0.00 && splitParts[1] == 02  && splitParts[2] > 28) || (splitParts[1] == 02  && splitParts[2] > 29))//check for %4 and february
+    if (((tmp % 4) == 0.00 && splitParts[1] == 02  && splitParts[2] > 28) || (splitParts[1] == 02  && splitParts[2] > 29))
     {
         std::cout << "Error: bad input3 => " << line << std::endl;
         return (1);
@@ -110,25 +108,50 @@ int BitcoinExchange::fillmap()
         return(1);
     }
     std::getline(data_file, line);
+    tmp = 0;
     while (std::getline(data_file, line))
     {
+        tmp++;
         limit = line.find(',');
         str = line.substr(0, limit);
         str2 = line.substr(limit + 1, line.size());
+        if (tmp == 1)
+            start_year = str;
         std::stringstream a(str2);
-        double what = 0.0;
-        a >> what;//in case of failure
-        myMap.insert(std::make_pair(str, what));
+        double value = 0.0;
+        a >> value;
+        myMap.insert(std::make_pair(str, value));
     }
     data_file.close();
     return(0);
 }
 
-BitcoinExchange::BitcoinExchange() {}
+void BitcoinExchange::search_and_calculate()
+{
+    std::map<std::string, double>::iterator it = myMap.find(str);
+    if (it != myMap.end())
+        std::cout << str << " => " << str2 << " = "<< it->second * price_double << std::endl;
+    else
+    {
+        it = myMap.lower_bound(str);
+        if (it->first == start_year && str != start_year)
+            std::cout << "Error: bad input9 => " << line << std::endl;
+        else if (it->first == start_year && str == start_year)
+            std::cout << str << " => " << str2 << " = "<< it->second * price_double << std::endl;
+        else if (it != myMap.end())
+        {
+            it--;
+            std::cout << str << " => " << str2 << " = "<< it->second * price_double << std::endl;
+        }
+        else
+            std::cout << "Error: bad in0put9 => " << line << std::endl;
+        
+    }
+}
 
 BitcoinExchange::BitcoinExchange(std::string input_file)
 {
-    if (fillmap())//fill the map
+    if (fillmap())
         return;
     std::ifstream file(input_file);
     if (!file.is_open())
@@ -142,26 +165,33 @@ BitcoinExchange::BitcoinExchange(std::string input_file)
         std::cout << "Error: bad input\n";
         return;
     }
-
-    while (std::getline(file, line))//start reading the file from line 2
+    while (std::getline(file, line))
     {
-        if (check_num_pipe_space())//check en general
+        if (check_num_pipe_space() || check_date() || check_value() )
             continue;
-        if (check_date()) //check the date
-            continue;
-        if (check_value()) //check the value
-            continue;
-        
-        //search and calculate
-        for (std::map<std::string, double>::iterator it = myMap.begin(); it != myMap.end(); ++it)
-        {
-            if (it->first == str)
-                std::cout << str << " => " << str2 << " = "<< it->second * price_double << std::endl;
-            // else
-            //     std::cout << "nope" << std::endl;
-            //case of (if it's the last one and there not a date near of it )
-        }
+        search_and_calculate();
     }
+}
+
+BitcoinExchange::BitcoinExchange(const BitcoinExchange &val)
+{
+	*this = val;
+}
+
+BitcoinExchange &BitcoinExchange::operator=(const BitcoinExchange &a)
+{
+	if (this != &a)
+	{
+        this->myMap = a.myMap;
+	    this->tmp = a.tmp;
+	    this->limit = a.limit;
+	    this->str = a.str;
+	    this->str2 = a.str2;
+	    this->start_year = a.start_year;
+	    this->line = a.line;
+	    this->price_double = a.price_double;
+	}
+	return *this;
 }
 
 BitcoinExchange::~BitcoinExchange(){}
