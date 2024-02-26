@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/25 11:19:22 by kben-ham          #+#    #+#             */
-/*   Updated: 2024/02/25 12:21:29 by kben-ham         ###   ########.fr       */
+/*   Updated: 2024/02/26 13:26:38 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,12 @@
 class  Rpn
 {
 private:
-    int val1;
-    int val2;
+	Rpn();
+    int val1, val2;
     std::stack<int>num_stack;
 
 public:
 
-	Rpn();
 	Rpn(const std::string &input);
 	Rpn(const Rpn &val);
 	Rpn &operator=(const Rpn &a);

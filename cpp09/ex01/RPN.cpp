@@ -6,13 +6,11 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/25 11:19:24 by kben-ham          #+#    #+#             */
-/*   Updated: 2024/02/25 21:03:25 by kben-ham         ###   ########.fr       */
+/*   Updated: 2024/02/26 13:21:05 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RPN.hpp"
-
-Rpn::Rpn(){}
 
 Rpn::Rpn(const std::string &input)
 {
@@ -27,6 +25,11 @@ Rpn::Rpn(const std::string &input)
             num_stack.push(input[i] - 48);
         else if (input[i] == '+' || input[i] == '-' || input[i] == '/' || input[i] == '*')
         {
+            if (num_stack.size() < 2)
+            {
+                std::cout << "Error" << std::endl;
+                return;
+            }
             val2 = num_stack.top();
             num_stack.pop();
             val1 = num_stack.top();
@@ -47,6 +50,11 @@ Rpn::Rpn(const std::string &input)
                 num_stack.push(val1 / val2);
             }
         }
+    }
+    if (num_stack.size() != 1)
+    {
+        std::cout << "Error" << std::endl;
+        return;
     }
     std::cout << num_stack.top() << std::endl;
 }
