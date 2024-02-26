@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 23:32:15 by kben-ham          #+#    #+#             */
-/*   Updated: 2024/02/26 12:55:21 by kben-ham         ###   ########.fr       */
+/*   Updated: 2024/02/26 12:58:02 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -145,7 +145,6 @@ void BitcoinExchange::search_and_calculate()
         }
         else
             std::cout << "Error: bad in0put9 => " << line << std::endl;
-        
     }
 }
 
