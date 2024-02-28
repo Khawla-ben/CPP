@@ -121,3 +121,11 @@ https://www.geeksforgeeks.org/stack-in-cpp-stl/
 https://paodayag.dev/reverse-polish-notation-js-parser/
 https://www.google.com/search?q=reverse+polish+notation&sca_esv=ca6b1dfc08a6761a&bih=1271&biw=603&rlz=1C5GCEA_enMA1092MA1092&hl=en&sxsrf=ACQVn09ZjpKK5e8pf226HZ_X20m8S-hE9Q%3A1708858219180&ei=axvbZbrTCpLZi-gPns-cyA4&ved=0ahUKEwj6tID5qMaEAxWS7AIHHZ4nB-kQ4dUDCBA&uact=5&oq=reverse+polish+notation&gs_lp=Egxnd3Mtd2l6LXNlcnAiF3JldmVyc2UgcG9saXNoIG5vdGF0aW9uMgoQIxiABBiKBRgnMgsQABiABBiKBRiRAjIKEAAYgAQYigUYQzIKEAAYgAQYigUYQzILEAAYgAQYigUYkQIyChAAGIAEGIoFGEMyChAAGIAEGIoFGEMyBRAAGIAEMgUQABiABDIFEAAYgARIzQdQ8gNYkgVwAXgBkAEAmAGcAaABoQKqAQMwLjK4AQPIAQD4AQGYAgOgArACwgIKEAAYRxjWBBiwA5gDAIgGAZAGCJIHAzEuMg&sclient=gws-wiz-serp
 https://www.geeksforgeeks.org/lower_bound-in-cpp/
+
+https://iq.opengenus.org/vector-of-pairs-in-cpp/
+https://www.geeksforgeeks.org/vector-insert-function-in-cpp-stl/
+https://en.cppreference.com/w/cpp/utility/pair
+https://en.wikipedia.org/wiki/Merge-insertion_sort
+https://en.wikipedia.org/wiki/Jacobsthal_number#:~:text=The%20first%20Jacobsthal%20numbers%20are,number%20that%20is%20also%20prime.
+https://iq.opengenus.org/vector-of-pairs-in-cpp/
+https://www.geeksforgeeks.org/swap-in-cpp/
