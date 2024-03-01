@@ -129,3 +129,6 @@ https://en.wikipedia.org/wiki/Merge-insertion_sort
 https://en.wikipedia.org/wiki/Jacobsthal_number#:~:text=The%20first%20Jacobsthal%20numbers%20are,number%20that%20is%20also%20prime.
 https://iq.opengenus.org/vector-of-pairs-in-cpp/
 https://www.geeksforgeeks.org/swap-in-cpp/
+https://www.geeksforgeeks.org/vector-erase-and-clear-in-cpp/
+https://www.geeksforgeeks.org/std-find-in-cpp/
+https://en.cppreference.com/w/cpp/chrono/c/clock
