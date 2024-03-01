@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 23:31:41 by kben-ham          #+#    #+#             */
-/*   Updated: 2024/02/26 12:54:17 by kben-ham         ###   ########.fr       */
+/*   Updated: 2024/03/01 19:18:09 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,6 @@ public:
     int check_value();
 	int check_price();
 	void search_and_calculate();
+	int check_part(std::string part);
 
 };

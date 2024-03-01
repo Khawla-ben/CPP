@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 23:32:15 by kben-ham          #+#    #+#             */
-/*   Updated: 2024/03/01 11:42:02 by kben-ham         ###   ########.fr       */
+/*   Updated: 2024/03/01 19:37:15 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int BitcoinExchange::check_num_pipe_space()
     }
     if (pipe != 1  || space != 2)
     {
-        std::cout << "Error: bad input => " << line << std::endl;
+        std::cout << "Error: bad input10 => " << line << std::endl;
         return (1);
     }
     return (0);
@@ -34,13 +34,31 @@ int BitcoinExchange::check_num_pipe_space()
 int BitcoinExchange::check_price()
 {
     tmp = 0;
+    std::cout << str2;
     for (size_t i = 0; i < str2.size(); i++)
     {
         if (str2[i] == '.')
             tmp++;
         else if ((!isdigit(str2[i]) && str2[i] != '.') || tmp > 1 || str2[str2.size() - 1] == '.')
         {
-            std::cout << "Error: bad input => " << line << std::endl;
+            std::cout << "Error: bad input9 => " << line << std::endl;
+            return (1);
+        }
+    }
+    return (0);
+}
+
+int BitcoinExchange::check_part(std::string part)
+{
+    size_t limit1;
+    limit1 = part.find('|');
+    if (limit1 != std::string::npos)
+        part = part.substr(0, limit1 - 1);
+    for (size_t i = 0; i < part.size(); i++)
+    {
+        if (!isdigit(part[i]))
+        {
+            std::cout << "Error: bad input1 => " << line << std::endl;
             return (1);
         }
     }
@@ -71,29 +89,31 @@ int BitcoinExchange::check_date()
         if (line[limit + 2] == '-' && line[limit + 1] == ' ')
             std::cout << "Error: not a positive number." << std::endl;
         else    
-            std::cout << "Error: bad input => " << line << std::endl;
+            std::cout << "Error: bad input8 => " << line << std::endl;
         return (1);
     }
     std::istringstream inputStream(line);
-    std::vector<double> splitParts;
+    std::vector<int> splitParts;
     std::string part;
     while (std::getline(inputStream, part, '-'))
     {
+        if (check_part(part))
+            return (1);
         std::stringstream pa(part);
-        double part_double = 0.0;
-        pa >> part_double;
-        splitParts.push_back(part_double);
+        int part_int = 0;
+        pa >> part_int;
+        splitParts.push_back(part_int);
         
     }
     if (splitParts.size() != 3 || (splitParts[1] < 1 || splitParts[1] > 12) || (splitParts[2] < 1 || splitParts[2] > 31) || (splitParts[0] < 2009 || splitParts[0] > 2023))
     {
-        std::cout << "Error: bad input => " << line << std::endl;
+        std::cout << "Error: bad input2 => " << line << std::endl;
         return (1);
     }
     int tmp = splitParts[0];
     if (((tmp % 4) == 0.00 && splitParts[1] == 02  && splitParts[2] > 28) || (splitParts[1] == 02  && splitParts[2] > 29))
     {
-        std::cout << "Error: bad input => " << line << std::endl;
+        std::cout << "Error: bad input3 => " << line << std::endl;
         return (1);
     }
     return (0);
@@ -135,7 +155,7 @@ void BitcoinExchange::search_and_calculate()
     {
         it = myMap.lower_bound(str);
         if (it->first == start_year && str != start_year)
-            std::cout << "Error: bad input => " << line << std::endl;
+            std::cout << "Error: bad input4 => " << line << std::endl;
         else if (it->first == start_year && str == start_year)
             std::cout << str << " => " << str2 << " = "<< it->second * price_double << std::endl;
         else if (it != myMap.end())
@@ -144,7 +164,7 @@ void BitcoinExchange::search_and_calculate()
             std::cout << str << " => " << str2 << " = "<< it->second * price_double << std::endl;
         }
         else
-            std::cout << "Error: bad input => " << line << std::endl;
+            std::cout << "Error: bad input5 => " << line << std::endl;
     }
 }
 
