@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 13:29:13 by kben-ham          #+#    #+#             */
-/*   Updated: 2024/03/01 10:24:59 by kben-ham         ###   ########.fr       */
+/*   Updated: 2024/03/01 11:57:36 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,13 +41,18 @@ int PmergeMe::get_the_vec(char **input, int ac)
 					return(1);
 				}
 				std::stringstream pa(tmp);
-				pa >> part_int;
-				vec.push_back(part_int);
+				pa >> part_long;
+				if (part_long > 2147483647)
+				{
+					std::cout << "Error\n";
+					return(1);
+				}
+				vec.push_back(part_long);
 			}
 		}
 	}
 	size = vec.size();
-	if (vec.size() == 1)
+	if (vec.size() == 1 || vec.size() == 0)
 	{
 		std::cout << "Error\n";
 		return (1);
@@ -75,8 +80,8 @@ int PmergeMe::get_the_deq(char **input, int ac)
 			if (tmp != "")
 			{
 				std::stringstream pa(tmp);
-				pa >> part_int;
-				deq.push_back(part_int);
+				pa >> part_long;
+				deq.push_back(part_long);
 			}
 		}
 	}
@@ -218,7 +223,7 @@ int PmergeMe::use_vec(char **input, int ac)
         std::cout << vec_first[i] << " ";
     std::cout << std::endl;
 	end = std::clock();
-	duree = ((end - start) / (double)CLOCKS_PER_SEC) *  1e6;
+	duree = (end - start);
 	std::cout << "Time to process a range of " << size <<  " elements with std::vector" <<  " : " << duree  << " us" << std::endl;
 	return (0);
 }
@@ -232,7 +237,7 @@ int PmergeMe::use_deque(char **input, int ac)
 	fill_deq_jacob_and_deq_insertion();
 	insert_them_deq();
 	end = std::clock();
-	duree = ((end - start) / (double)CLOCKS_PER_SEC) *  1e6;
+	duree = (end - start);
 	std::cout << "Time to process a range of " << size <<  " elements with std::deque" <<  " : " << duree  << " us";
 	return (0);
 }
@@ -255,7 +260,7 @@ PmergeMe &PmergeMe::operator=(const PmergeMe &a)
 	if (this != &a)
 	{
 		this->odd_number = a.odd_number;
-		this->part_int = a.part_int;
+		this->part_long = a.part_long;
 		this->limit = a.limit;
 		this->vec = a.vec;
 		this->vec_pair = a.vec_pair;

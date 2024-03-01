@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 23:32:15 by kben-ham          #+#    #+#             */
-/*   Updated: 2024/02/26 12:58:02 by kben-ham         ###   ########.fr       */
+/*   Updated: 2024/03/01 11:42:02 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int BitcoinExchange::check_num_pipe_space()
     }
     if (pipe != 1  || space != 2)
     {
-        std::cout << "Error: bad input4 => " << line << std::endl;
+        std::cout << "Error: bad input => " << line << std::endl;
         return (1);
     }
     return (0);
@@ -40,7 +40,7 @@ int BitcoinExchange::check_price()
             tmp++;
         else if ((!isdigit(str2[i]) && str2[i] != '.') || tmp > 1 || str2[str2.size() - 1] == '.')
         {
-            std::cout << "Error: bad input5 => " << line << std::endl;
+            std::cout << "Error: bad input => " << line << std::endl;
             return (1);
         }
     }
@@ -71,7 +71,7 @@ int BitcoinExchange::check_date()
         if (line[limit + 2] == '-' && line[limit + 1] == ' ')
             std::cout << "Error: not a positive number." << std::endl;
         else    
-            std::cout << "Error: bad input1 => " << line << std::endl;
+            std::cout << "Error: bad input => " << line << std::endl;
         return (1);
     }
     std::istringstream inputStream(line);
@@ -87,13 +87,13 @@ int BitcoinExchange::check_date()
     }
     if (splitParts.size() != 3 || (splitParts[1] < 1 || splitParts[1] > 12) || (splitParts[2] < 1 || splitParts[2] > 31) || (splitParts[0] < 2009 || splitParts[0] > 2023))
     {
-        std::cout << "Error: bad input2 => " << line << std::endl;
+        std::cout << "Error: bad input => " << line << std::endl;
         return (1);
     }
     int tmp = splitParts[0];
     if (((tmp % 4) == 0.00 && splitParts[1] == 02  && splitParts[2] > 28) || (splitParts[1] == 02  && splitParts[2] > 29))
     {
-        std::cout << "Error: bad input3 => " << line << std::endl;
+        std::cout << "Error: bad input => " << line << std::endl;
         return (1);
     }
     return (0);
@@ -135,7 +135,7 @@ void BitcoinExchange::search_and_calculate()
     {
         it = myMap.lower_bound(str);
         if (it->first == start_year && str != start_year)
-            std::cout << "Error: bad input9 => " << line << std::endl;
+            std::cout << "Error: bad input => " << line << std::endl;
         else if (it->first == start_year && str == start_year)
             std::cout << str << " => " << str2 << " = "<< it->second * price_double << std::endl;
         else if (it != myMap.end())
@@ -144,7 +144,7 @@ void BitcoinExchange::search_and_calculate()
             std::cout << str << " => " << str2 << " = "<< it->second * price_double << std::endl;
         }
         else
-            std::cout << "Error: bad in0put9 => " << line << std::endl;
+            std::cout << "Error: bad input => " << line << std::endl;
     }
 }
 

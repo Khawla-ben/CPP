@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 13:29:11 by kben-ham          #+#    #+#             */
-/*   Updated: 2024/03/01 10:24:00 by kben-ham         ###   ########.fr       */
+/*   Updated: 2024/03/01 11:59:24 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ class   PmergeMe
 {
 private:
 	PmergeMe();
-	int odd_number, part_int, size;
+	int odd_number, size;
+	long long part_long;
 	long long limit;
 	double duree;
 	std::clock_t start, end;
