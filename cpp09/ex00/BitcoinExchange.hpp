@@ -6,25 +6,25 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 23:31:41 by kben-ham          #+#    #+#             */
-/*   Updated: 2024/03/01 19:18:09 by kben-ham         ###   ########.fr       */
+/*   Updated: 2024/03/02 22:52:12 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-
+ 
 #include <iostream>
 #include <sstream>
 #include <fstream>
 #include <map>
 #include <vector>
-
+ 
 
 class  BitcoinExchange
 {
 private:
 	BitcoinExchange();
 	std::map<std::string, double> myMap;
-	size_t limit, tmp;
+	size_t limit, tmp, len;
 	std::string str, str2;
 	std::string start_year;
 	std::string line;
