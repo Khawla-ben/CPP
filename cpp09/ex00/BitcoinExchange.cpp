@@ -6,7 +6,7 @@
 /*   By: kben-ham <kben-ham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 23:32:15 by kben-ham          #+#    #+#             */
-/*   Updated: 2024/03/02 22:52:05 by kben-ham         ###   ########.fr       */
+/*   Updated: 2024/03/03 01:35:03 by kben-ham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -163,7 +163,8 @@ void BitcoinExchange::search_and_calculate()
         it = myMap.lower_bound(str);
         if (it != myMap.end())
         {
-            it--;
+            if (str >= start_year)
+                it--;
             std::cout << str << " => " << str2 << " = "<< it->second * price_double << std::endl;
         }
         else
