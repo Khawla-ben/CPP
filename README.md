@@ -6,6 +6,33 @@ These are some resources I used to do the requirements :
 
 https://docs.google.com/document/d/14OKEUhT8BQy4mQOb7CkiC50BOFQ9jY7h_vFT2eLlm8Y/edit?pli=1#heading=h.p5hfvyca32u2
 https://www.youtube.com/watch?v=wJ1L2nSIV1s
+https://zhjwpku.com/assets/pdf/books/C++.Primer.Plus.6th.Edition.Oct.2011.pdf
+https://www.learncpp.com/
+
+
+https://www.w3schools.com/cpp/cpp_inheritance_access.asp
+https://www.geeksforgeeks.org/inheritance-in-c/?ref=lbp
+https://www.youtube.com/watch?v=8afbTaA-gOQ
+https://www.h-schmidt.net/FloatConverter/IEEE754.html
+https://www.rapidtables.com/convert/number/decimal-to-binary.html
+https://www.youtube.com/watch?v=9lLpAFapndo
+https://www.francescmm.com/orthodox-canonical-class-form/
+https://www.geeksforgeeks.org/cpp-basic-syntax/?ref=lbp
+https://www.geeksforgeeks.org/stdoct-stddec-and-stdhex-in-cpp/
+https://www.geeksforgeeks.org/stringstream-c-decimal-hexadecimal-back/
+https://www.geeksforgeeks.org/basic-input-output-c/
+https://www.geeksforgeeks.org/c-classes-and-objects/
+https://www.geeksforgeeks.org/abstraction-in-cpp/
+https://www.geeksforgeeks.org/virtual-functions-and-runtime-polymorphism-in-cpp/
+https://www.geeksforgeeks.org/inheritance-in-c/
+https://www.geeksforgeeks.org/tokens-in-c/?ref=lbp
+https://cplusplus.com/reference/iomanip/
+https://github.com/qingqingqingli/CPP/wiki
+https://www.geeksforgeeks.org/introduction-of-object-oriented-programming/
+https://www.w3schools.com/cpp/cpp_inheritance.asp
+https://cplusplus.com/reference/string/string/
+https://programiz.pro/signup?isloggedout=true&next=%2Fcourse%2Flearn-cpp-basics%2Fget-started%3Fpage%3D1&reason=session_expired
+https://42-cursus.gitbook.io/guide/rank-04/cpp-00-04-doing
 
 CPP00:
 -------
@@ -40,6 +67,7 @@ https://www.ni.com/docs/en-US/bundle/labview-api-ref/page/functions/integer-to-f
 https://www.h-schmidt.net/FloatConverter/IEEE754.html
 https://www.geeksforgeeks.org/cpp-polymorphism/
 https://www.geeksforgeeks.org/increment-and-decrement-operator-overloading-in-c/
+https://www.youtube.com/watch?v=8afbTaA-gOQ
 
 CPP03:
 ------
